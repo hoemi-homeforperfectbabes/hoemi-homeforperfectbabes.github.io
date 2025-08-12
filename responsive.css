@@ -1,0 +1,181 @@
+/* MOBILE RESPONSIVE STYLES FOR PHONES ~375px */
+@media (max-width: 500px) {
+
+    /* HEADER */
+    header {
+        height: auto;
+        padding: 10px 0;
+        width: 100%;
+    }
+
+    .header-items {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 0 15px;
+    }
+
+    .header-logo,
+    .header-logo span {
+        font-size: 26px;
+        margin: 3px 0;
+        cursor: pointer;
+    }
+
+    .header-nav {
+        display: none;
+    }
+
+    /* INTRO  */
+    .intro {
+        height: 100vh;
+        padding: 0 15px;
+        /* background-attachment: scroll; */
+        text-align: center;
+    }
+
+    .intro h1,
+    .intro h1 span {
+        /* color: black; */
+        font-size: 32px;
+        line-height: 1.2;
+    }
+
+    .intro h5 {
+        font-size: 16px;
+    }
+
+    /* ABOUT US  */
+    .about-us {
+        height: 20vh;
+        padding: 20px 5px;
+    }
+
+    .about-us h1,
+    .about-us h1 span {
+        font-size: 24px;
+        margin-bottom: 8px;
+
+    }
+
+    .about-us p {
+        font-size: 12px;
+        padding: 0 30px;
+    }
+
+    /* CONTAINER */
+    .babe-container {
+        margin: 60px 0;
+        padding: 20px 0 0 0;
+    }
+
+    .babe-container h1 {
+        font-size: 30px;
+    }
+
+    .babe-list {
+        height: 445px;
+    }
+
+    .babe-card {
+        height: 375px;
+        min-width: 275px;
+        width: 275px;
+    }
+
+    /* BABE DATA */
+    .second-container {
+        width: 90vw;
+        margin: 0 auto;
+    }
+
+    .babe-data {
+        height: auto;
+        padding: 0;
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    .babe-pp {
+        height: 300px;
+        width: 300px;
+        border-radius: 50%;
+    }
+
+    .babe-info {
+        height: auto;
+        width: 100%;
+        margin-top: 0;
+        text-align: center;
+    }
+
+    .babe-info .name {
+        font-size: 34px;
+    }
+
+    .babe-info .dob {
+        font-size: 24px;
+    }
+
+    .babe-info .social {
+        margin-top: 30px;
+    }
+
+    .social p {
+        font-size: 34px;
+    }
+
+    .social .social-icon a i {
+        margin: 0 0;
+        padding: 20px 10px;
+    }
+
+    /* BABE CONTENT */
+    .babe-content {
+        width: 90vw;
+    }
+
+    .babe-content .title {
+        margin: 20px 0 15px 0;
+    }
+
+    /* PHOTO CONTAINER  */
+    .babe-photo-container {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 6px 4px;
+    }
+
+    /* VIDEO CONTAINER  */
+    .babe-video-container-horizontal {
+        grid-template-columns: repeat(1, 1fr);
+        gap: 10px;
+    }
+
+    .babe-video-container-vertical {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px 4px;
+    }
+
+    /* PHOTO POPUP  */
+    .popup-babe-photo .close-btn {
+        right: 20px;
+    }
+
+    .popup-babe-photo button {
+        padding: 60px 20px;
+    }
+
+    .prev-btn {
+        left: 0px;
+    }
+
+    .next-btn {
+        right: 0px;
+    }
+
+    #backToTop {
+        bottom: 10px;
+        right: 20px;
+
+    }
+}
