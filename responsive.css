@@ -28,7 +28,7 @@
 
     /* INTRO  */
     .intro {
-        height: 100vh;
+        height: 70vh;
         padding: 0 15px;
         /* background-attachment: scroll; */
         text-align: center;
@@ -140,7 +140,7 @@
     }
 
     /* PHOTO CONTAINER  */
-    .babe-photo-container {
+    .photo-cards-wrapper {
         grid-template-columns: repeat(2, 1fr);
         gap: 6px 4px;
     }
@@ -176,6 +176,5 @@
     #backToTop {
         bottom: 10px;
         right: 20px;
-
     }
 }

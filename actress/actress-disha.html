@@ -8,18 +8,9 @@
     <link rel="stylesheet" href="../style.css">
     <link rel="stylesheet" href="../responsive.css">
     <script src="https://kit.fontawesome.com/17cb0df104.js" crossorigin="anonymous"></script>
-    <style>
-        body {
-            max-width: 100vw;
-            background: url('../pics/pink-babe-bg.jpg');
-            background-size: cover;
-            background-repeat: no-repeat;
-            background-position: top;
-        }
-    </style>
 </head>
 
-<body>
+<body class="body-bg-style">
     <div class="parallax-bg"></div>
     <header>
         <div class="header-items">
@@ -73,118 +64,67 @@
                         <img src="" alt="" />
                         <button class="next-btn"><i class="fa-solid fa-chevron-right"></i></button>
                     </div>
-                    <div class="babe-photo-card">
-                        <img src="actress-pic/disha/img/36.jpg" alt="">
-                    </div>
-                    <div class="babe-photo-card">
-                        <img src="actress-pic/disha/img/35.jpg" alt="">
-                    </div>
-                    <div class="babe-photo-card">
-                        <img src="actress-pic/disha/img/34.jpg" alt="">
-                    </div>
-                    <div class="babe-photo-card">
-                        <img src="actress-pic/disha/img/33.jpg" alt="">
-                    </div>
-                    <div class="babe-photo-card">
-                        <img src="actress-pic/disha/img/32.jpg" alt="">
-                    </div>
-                    <div class="babe-photo-card">
-                        <img src="actress-pic/disha/img/31.jpg" alt="">
-                    </div>
-                    <div class="babe-photo-card">
-                        <img src="actress-pic/disha/img/30.jpg" alt="">
-                    </div>
-                    <div class="babe-photo-card">
-                        <img src="actress-pic/disha/img/29.jpg" alt="">
-                    </div>
-                    <div class="babe-photo-card">
-                        <img src="actress-pic/disha/img/28.jpg" alt="">
-                    </div>
-                    <div class="babe-photo-card">
-                        <img src="actress-pic/disha/img/27.jpg" alt="">
-                    </div>
-                    <div class="babe-photo-card">
-                        <img src="actress-pic/disha/img/26.jpg" alt="">
-                    </div>
-                    <div class="babe-photo-card">
-                        <img src="actress-pic/disha/img/25.jpg" alt="">
-                    </div>
-                    <div class="babe-photo-card">
-                        <img src="actress-pic/disha/img/24.jpg" alt="">
-                    </div>
-                    <div class="babe-photo-card">
-                        <img src="actress-pic/disha/img/23.jpg" alt="">
-                    </div>
-                    <div class="babe-photo-card">
-                        <img src="actress-pic/disha/img/22.jpg" alt="">
-                    </div>
-                    <div class="babe-photo-card">
-                        <img src="actress-pic/disha/img/21.jpg" alt="">
-                    </div>
-                    <div class="babe-photo-card">
-                        <img src="actress-pic/disha/img/20.jpg" alt="">
-                    </div>
-                    <div class="babe-photo-card">
-                        <img src="actress-pic/disha/img/19.jpg" alt="">
-                    </div>
-                    <div class="babe-photo-card">
-                        <img src="actress-pic/disha/img/18.jpg" alt="">
-                    </div>
-                    <div class="babe-photo-card">
-                        <img src="actress-pic/disha/img/17.jpeg" alt="">
-                    </div>
-                    <div class="babe-photo-card">
-                        <img src="actress-pic/disha/img/16.jpg" alt="">
-                    </div>
-                    <div class="babe-photo-card">
-                        <img src="actress-pic/disha/img/15.jpg" alt="">
-                    </div>
-                    <div class="babe-photo-card">
-                        <img src="actress-pic/disha/img/14.jpg" alt="">
-                    </div>
-                    <div class="babe-photo-card">
-                        <img src="actress-pic/disha/img/13.jpg" alt="">
-                    </div>
-                    <div class="babe-photo-card">
-                        <img src="actress-pic/disha/img/12.jpg" alt="">
-                    </div>
-                    <div class="babe-photo-card">
-                        <img src="actress-pic/disha/img/11.jpg" alt="">
-                    </div>
-                    <div class="babe-photo-card">
-                        <img src="actress-pic/disha/img/10.jpg" alt="">
-                    </div>
-                    <div class="babe-photo-card">
-                        <img src="actress-pic/disha/img/9.jpg" alt="">
-                    </div>
-                    <div class="babe-photo-card">
-                        <img src="actress-pic/disha/img/8.jpg" alt="">
-                    </div>
-                    <div class="babe-photo-card">
-                        <img src="actress-pic/disha/img/7.jpg" alt="">
-                    </div>
-                    <div class="babe-photo-card">
-                        <img src="actress-pic/disha/img/6.jpg" alt="">
-                    </div>
-                    <div class="babe-photo-card">
-                        <img src="actress-pic/disha/img/5.jpg" alt="">
-                    </div>
-                    <div class="babe-photo-card">
-                        <img src="actress-pic/disha/img/4.jpg" alt="">
-                    </div>
-                    <div class="babe-photo-card">
-                        <img src="actress-pic/disha/img/3.jpg" alt="">
-                    </div>
-                    <div class="babe-photo-card">
-                        <img src="actress-pic/disha/img/2.jpg" alt="">
-                    </div>
-                    <div class="babe-photo-card">
-                        <img src="actress-pic/disha/img/1.jpg" alt="">
+                    <div class="photo-cards-wrapper">
+                        <script>
+                            const photoCardsWrapper = document.querySelector('.photo-cards-wrapper');
+                            // List of photo paths
+                            const photos = [
+                                "actress-pic/disha/img/39.jpg",
+                                "actress-pic/disha/img/38.jpg",
+                                "actress-pic/disha/img/37.jpg",
+                                "actress-pic/disha/img/36.jpg",
+                                "actress-pic/disha/img/35.jpg",
+                                "actress-pic/disha/img/34.jpg",
+                                "actress-pic/disha/img/33.jpg",
+                                "actress-pic/disha/img/32.jpg",
+                                "actress-pic/disha/img/31.jpg",
+                                "actress-pic/disha/img/30.jpg",
+                                "actress-pic/disha/img/29.jpg",
+                                "actress-pic/disha/img/28.jpg",
+                                "actress-pic/disha/img/27.jpg",
+                                "actress-pic/disha/img/26.jpg",
+                                "actress-pic/disha/img/25.jpg",
+                                "actress-pic/disha/img/24.jpg",
+                                "actress-pic/disha/img/23.jpg",
+                                "actress-pic/disha/img/22.jpg",
+                                "actress-pic/disha/img/21.jpg",
+                                "actress-pic/disha/img/20.jpg",
+                                "actress-pic/disha/img/19.jpg",
+                                "actress-pic/disha/img/18.jpg",
+                                "actress-pic/disha/img/17.jpeg",
+                                "actress-pic/disha/img/16.jpg",
+                                "actress-pic/disha/img/15.jpg",
+                                "actress-pic/disha/img/14.jpg",
+                                "actress-pic/disha/img/13.jpg",
+                                "actress-pic/disha/img/12.jpg",
+                                "actress-pic/disha/img/11.jpg",
+                                "actress-pic/disha/img/10.jpg",
+                                "actress-pic/disha/img/9.jpg",
+                                "actress-pic/disha/img/8.jpg",
+                                "actress-pic/disha/img/7.jpg",
+                                "actress-pic/disha/img/6.jpg",
+                                "actress-pic/disha/img/5.jpg",
+                                "actress-pic/disha/img/4.jpg",
+                                "actress-pic/disha/img/3.jpg",
+                                "actress-pic/disha/img/2.jpg",
+                                "actress-pic/disha/img/1.jpg"
+                            ];
+                            // Generate photo cards
+                            photos.forEach(src => {
+                                const card = document.createElement('div');
+                                card.className = 'babe-photo-card';
+                                card.innerHTML = `<img src="${src}" alt="">`;
+                                photoCardsWrapper.appendChild(card);
+                            });
+                        </script>
                     </div>
                 </div>
                 <div class="babe-video-container">
-                    <div class="babe-video-card">
-                        <video src="" controls></video>
+                    <div class="babe-video-container-vertical">
+                        <div class="babe-video-card-vertical">
+                            <!-- <iframe allow="fullscreen" allowfullscreen height="1280" src="" width="720"
+                                style="border:none;"></iframe> -->
+                        </div>
                     </div>
                 </div>
             </div>

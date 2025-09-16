@@ -8,17 +8,9 @@
     <link rel="stylesheet" href="../style.css">
     <link rel="stylesheet" href="../responsive.css">
     <script src="https://kit.fontawesome.com/17cb0df104.js" crossorigin="anonymous"></script>
-    <style>
-        body {
-            background: url('../pics/pink-babe-bg.jpg');
-            background-size: cover;
-            background-repeat: no-repeat;
-            background-position: top;
-        }
-    </style>
 </head>
 
-<body>
+<body class="body-bg-style">
     <div class="parallax-bg"></div>
     <header>
         <div class="header-items">
@@ -72,229 +64,102 @@
                         <img src="" alt="" />
                         <button class="next-btn"><i class="fa-solid fa-chevron-right"></i></button>
                     </div>
-                    <div class="babe-photo-card">
-                        <img src="chicks-pic/swostika/img/17.jpg" alt="">
-                    </div>
-                    <div class="babe-photo-card">
-                        <img src="chicks-pic/swostika/img/16.png" alt="">
-                    </div>
-                    <div class="babe-photo-card">
-                        <img src="chicks-pic/swostika/img/15.png" alt="">
-                    </div>
-                    <div class="babe-photo-card">
-                        <img src="chicks-pic/swostika/img/14.png" alt="">
-                    </div>
-                    <div class="babe-photo-card">
-                        <img src="chicks-pic/swostika/img/13.png" alt="">
-                    </div>
-                    <div class="babe-photo-card">
-                        <img src="chicks-pic/swostika/img/12.png" alt="">
-                    </div>
-                    <div class="babe-photo-card">
-                        <img src="chicks-pic/swostika/img/11.png" alt="">
-                    </div>
-                    <div class="babe-photo-card">
-                        <img src="chicks-pic/swostika/img/10.png" alt="">
-                    </div>
-                    <div class="babe-photo-card">
-                        <img src="chicks-pic/swostika/img/9.png" alt="">
-                    </div>
-                    <div class="babe-photo-card">
-                        <img src="chicks-pic/swostika/img/8.png" alt="">
-                    </div>
-                    <div class="babe-photo-card">
-                        <img src="chicks-pic/swostika/img/7.png" alt="">
-                    </div>
-                    <div class="babe-photo-card">
-                        <img src="chicks-pic/swostika/img/6.png" alt="">
-                    </div>
-                    <div class="babe-photo-card">
-                        <img src="chicks-pic/swostika/img/5.png" alt="">
-                    </div>
-                    <div class="babe-photo-card">
-                        <img src="chicks-pic/swostika/img/4.png" alt="">
-                    </div>
-                    <div class="babe-photo-card">
-                        <img src="chicks-pic/swostika/img/3.jpg" alt="">
-                    </div>
-                    <div class="babe-photo-card">
-                        <img src="chicks-pic/swostika/img/2.jpg" alt="">
-                    </div>
-                    <div class="babe-photo-card">
-                        <img src="chicks-pic/swostika/img/1.jpg" alt="">
+                    <div class="photo-cards-wrapper">
+                        <script>
+                            const photoCardsWrapper = document.querySelector('.photo-cards-wrapper');
+                            // List of photo paths
+                            const photos = [
+                                "chicks-pic/swostika/img/20.jpg",
+                                "chicks-pic/swostika/img/19.jpg",
+                                "chicks-pic/swostika/img/18.jpg",
+                                "chicks-pic/swostika/img/17.jpg",
+                                "chicks-pic/swostika/img/16.png",
+                                "chicks-pic/swostika/img/15.png",
+                                "chicks-pic/swostika/img/14.png",
+                                "chicks-pic/swostika/img/13.png",
+                                "chicks-pic/swostika/img/12.png",
+                                "chicks-pic/swostika/img/11.png",
+                                "chicks-pic/swostika/img/10.png",
+                                "chicks-pic/swostika/img/9.png",
+                                "chicks-pic/swostika/img/8.png",
+                                "chicks-pic/swostika/img/7.png",
+                                "chicks-pic/swostika/img/6.png",
+                                "chicks-pic/swostika/img/5.png",
+                                "chicks-pic/swostika/img/4.png",
+                                "chicks-pic/swostika/img/3.jpg",
+                                "chicks-pic/swostika/img/2.jpg",
+                                "chicks-pic/swostika/img/1.jpg"
+                            ];
+                            // Generate photo cards
+                            photos.forEach(src => {
+                                const card = document.createElement('div');
+                                card.className = 'babe-photo-card';
+                                card.innerHTML = `<img src="${src}" alt="">`;
+                                photoCardsWrapper.appendChild(card);
+                            });
+                        </script>
                     </div>
                 </div>
                 <div class="babe-video-container-vertical">
-                    <div class="babe-video-card-vertical">
-                        <iframe allow="fullscreen" allowfullscreen height="1280"
-                            src="https://streamable.com/e/pr3jjr?loop=1&muted=1" width="720"
-                            style="border:none;"></iframe>
-                    </div>
-                    <div class="babe-video-card-vertical">
-                        <iframe allow="fullscreen" allowfullscreen height="1280"
-                            src="https://streamable.com/e/1b6p2t?loop=1&muted=1" width="720"
-                            style="border:none;"></iframe>
-                    </div>
-                    <div class="babe-video-card-vertical">
-                        <iframe allow="fullscreen" allowfullscreen height="1280"
-                            src="https://streamable.com/e/0clfdg?loop=1&muted=1" width="720"
-                            style="border:none;"></iframe>
-                    </div>
-                    <div class="babe-video-card-vertical">
-                        <iframe allow="fullscreen" allowfullscreen height="1280"
-                            src="https://streamable.com/e/0xm7u6?loop=1&muted=1" width="720"
-                            style="border:none;"></iframe>
-                    </div>
-                    <div class="babe-video-card-vertical">
-                        <iframe allow="fullscreen" allowfullscreen height="1280"
-                            src="https://streamable.com/e/7d9b90?loop=1&muted=1" width="720"
-                            style="border:none;"></iframe>
-                    </div>
-                    <div class="babe-video-card-vertical">
-                        <iframe allow="fullscreen" allowfullscreen height="1280"
-                            src="https://streamable.com/e/wmk2cn?loop=1&muted=1" width="720"
-                            style="border:none;"></iframe>
-                    </div>
-                    <div class="babe-video-card-vertical">
-                        <iframe allow="fullscreen" allowfullscreen height="1280"
-                            src="https://streamable.com/e/r93lww?loop=1&muted=1" width="720"
-                            style="border:none;"></iframe>
-                    </div>
-                    <div class="babe-video-card-vertical">
-                        <iframe allow="fullscreen" allowfullscreen height="1280"
-                            src="https://streamable.com/e/h03tt1?loop=1&muted=1" width="720"
-                            style="border:none;"></iframe>
-                    </div>
-                    <div class="babe-video-card-vertical">
-                        <iframe allow="fullscreen" allowfullscreen height="1280"
-                            src="https://streamable.com/e/5d7k86?loop=1&muted=1" width="720"
-                            style="border:none;"></iframe>
-                    </div>
-                    <div class="babe-video-card-vertical">
-                        <iframe allow="fullscreen" allowfullscreen height="1280"
-                            src="https://streamable.com/e/bn274t?loop=1&muted=1" width="720"
-                            style="border:none;"></iframe>
-                    </div>
-                    <div class="babe-video-card-vertical">
-                        <iframe allow="fullscreen" allowfullscreen height="1280"
-                            src="https://streamable.com/e/u36dvq?loop=1&muted=1" width="720"
-                            style="border:none;"></iframe>
-                    </div>
-                    <div class="babe-video-card-vertical">
-                        <iframe allow="fullscreen" allowfullscreen height="1280"
-                            src="https://streamable.com/e/4darje?loop=1&muted=1" width="720"
-                            style="border:none;"></iframe>
-                    </div>
-                    <div class="babe-video-card-vertical">
-                        <iframe allow="fullscreen" allowfullscreen height="1280"
-                            src="https://streamable.com/e/g0astj?loop=1&muted=1" width="720"
-                            style="border:none;"></iframe>
-                    </div>
-                    <div class="babe-video-card-vertical">
-                        <iframe allow="fullscreen" allowfullscreen height="1280"
-                            src="https://streamable.com/e/zzah5l?loop=1&muted=1" width="720"
-                            style="border:none;"></iframe>
-                    </div>
-                    <div class="babe-video-card-vertical">
-                        <iframe allow="fullscreen" allowfullscreen height="1280"
-                            src="https://streamable.com/e/jyiop2?loop=1&muted=1" width="720"
-                            style="border:none;"></iframe>
-                    </div>
-                    <div class="babe-video-card-vertical">
-                        <iframe allow="fullscreen" allowfullscreen height="1280"
-                            src="https://streamable.com/e/9tmde7?loop=1&muted=1" width="720"
-                            style="border:none;"></iframe>
-                    </div>
-                    <div class="babe-video-card-vertical">
-                        <iframe allow="fullscreen" allowfullscreen height="1280"
-                            src="https://streamable.com/e/0om7xc?loop=1&muted=1" width="720"
-                            style="border:none;"></iframe>
-                    </div>
-                    <div class="babe-video-card-vertical">
-                        <iframe allow="fullscreen" allowfullscreen height="1280"
-                            src="https://streamable.com/e/wua49t?loop=1&muted=1" width="720"
-                            style="border:none;"></iframe>
-                    </div>
-                    <div class="babe-video-card-vertical">
-                        <iframe allow="fullscreen" allowfullscreen height="1280"
-                            src="https://streamable.com/e/4ufs06?loop=1&muted=1" width="720"
-                            style="border:none;"></iframe>
-                    </div>
-                    <div class="babe-video-card-vertical">
-                        <iframe allow="fullscreen" allowfullscreen height="1280"
-                            src="https://streamable.com/e/psn043?loop=1&muted=1" width="720"
-                            style="border:none;"></iframe>
-                    </div>
-                    <div class="babe-video-card-vertical">
-                        <iframe allow="fullscreen" allowfullscreen height="1280"
-                            src="https://streamable.com/e/p1ul61?loop=1&muted=1" width="720"
-                            style="border:none;"></iframe>
-                    </div>
-                    <div class="babe-video-card-vertical">
-                        <iframe allow="fullscreen" allowfullscreen height="1280"
-                            src="https://streamable.com/e/sas52z?loop=1&muted=1" width="720"
-                            style="border:none;"></iframe>
-                    </div>
-                    <div class="babe-video-card-vertical">
-                        <iframe allow="fullscreen" allowfullscreen height="1280"
-                            src="https://streamable.com/e/fq9bbq?loop=1&muted=1" width="720"
-                            style="border:none;"></iframe>
-                    </div>
-                    <div class="babe-video-card-vertical">
-                        <iframe allow="fullscreen" allowfullscreen height="1280"
-                            src="https://streamable.com/e/iy704o?loop=1&muted=1" width="720"
-                            style="border:none;"></iframe>
-                    </div>
-                    <div class="babe-video-card-vertical">
-                        <iframe allow="fullscreen" allowfullscreen height="1280"
-                            src="https://streamable.com/e/g5hd39?loop=1&muted=1" width="720"
-                            style="border:none;"></iframe>
-                    </div>
-                    <div class="babe-video-card-vertical">
-                        <iframe allow="fullscreen" allowfullscreen height="1280"
-                            src="https://streamable.com/e/apk2fp?loop=1&muted=1" width="720"
-                            style="border:none;"></iframe>
-                    </div>
-                    <div class="babe-video-card-vertical">
-                        <iframe allow="fullscreen" allowfullscreen height="1280"
-                            src="https://streamable.com/e/zn4m80?loop=1&muted=1" width="720"
-                            style="border:none;"></iframe>
-                    </div>
-                    <div class="babe-video-card-vertical">
-                        <iframe allow="fullscreen" allowfullscreen height="1280"
-                            src="https://streamable.com/e/piyseb?loop=1&muted=1" width="720"
-                            style="border:none;"></iframe>
-                    </div>
-                    <div class="babe-video-card-vertical">
-                        <iframe allow="fullscreen" allowfullscreen height="1280"
-                            src="https://streamable.com/e/tizd7j?loop=1&muted=1" width="720"
-                            style="border:none;"></iframe>
-                    </div>
-                    <div class="babe-video-card-vertical">
-                        <iframe allow="fullscreen" allowfullscreen height="1280"
-                            src="https://streamable.com/e/cbskv7?loop=1&muted=1" width="720"
-                            style="border:none;"></iframe>
-                    </div>
-                    <div class="babe-video-card-vertical">
-                        <iframe allow="fullscreen" allowfullscreen height="1280"
-                            src="https://streamable.com/e/28csiy?loop=1&muted=1" width="720"
-                            style="border:none;"></iframe>
-                    </div>
-                    <div class="babe-video-card-vertical">
-                        <iframe allow="fullscreen" allowfullscreen height="1280"
-                            src="https://streamable.com/e/jyfyk4?loop=1&muted=1" width="720"
-                            style="border:none;"></iframe>
-                    </div>
-                    <div class="babe-video-card-vertical">
-                        <iframe allow="fullscreen" allowfullscreen height="1280"
-                            src="https://streamable.com/e/lb7qsh?loop=1&muted=1" width="720"
-                            style="border:none;"></iframe>
-                    </div>
-                    <div class="babe-video-card-vertical">
-                        <iframe allow="fullscreen" allowfullscreen height="1280"
-                            src="https://streamable.com/e/eae2s6?loop=1&muted=1" width="720"
-                            style="border:none;"></iframe>
-                    </div>
+                    <script>
+                        // Array of all video URLs
+                        const videos = [
+                            "https://streamable.com/e/vkjeqa?loop=1&muted=1",
+                            "https://streamable.com/e/cxp502?loop=1&muted=1",
+                            "https://streamable.com/e/pr3jjr?loop=1&muted=1",
+                            "https://streamable.com/e/1b6p2t?loop=1&muted=1",
+                            "https://streamable.com/e/0clfdg?loop=1&muted=1",
+                            "https://streamable.com/e/0xm7u6?loop=1&muted=1",
+                            "https://streamable.com/e/7d9b90?loop=1&muted=1",
+                            "https://streamable.com/e/wmk2cn?loop=1&muted=1",
+                            "https://streamable.com/e/r93lww?loop=1&muted=1",
+                            "https://streamable.com/e/h03tt1?loop=1&muted=1",
+                            "https://streamable.com/e/5d7k86?loop=1&muted=1",
+                            "https://streamable.com/e/bn274t?loop=1&muted=1",
+                            "https://streamable.com/e/u36dvq?loop=1&muted=1",
+                            "https://streamable.com/e/4darje?loop=1&muted=1",
+                            "https://streamable.com/e/g0astj?loop=1&muted=1",
+                            "https://streamable.com/e/zzah5l?loop=1&muted=1",
+                            "https://streamable.com/e/jyiop2?loop=1&muted=1",
+                            "https://streamable.com/e/9tmde7?loop=1&muted=1",
+                            "https://streamable.com/e/0om7xc?loop=1&muted=1",
+                            "https://streamable.com/e/wua49t?loop=1&muted=1",
+                            "https://streamable.com/e/4ufs06?loop=1&muted=1",
+                            "https://streamable.com/e/psn043?loop=1&muted=1",
+                            "https://streamable.com/e/p1ul61?loop=1&muted=1",
+                            "https://streamable.com/e/sas52z?loop=1&muted=1",
+                            "https://streamable.com/e/fq9bbq?loop=1&muted=1",
+                            "https://streamable.com/e/iy704o?loop=1&muted=1",
+                            "https://streamable.com/e/g5hd39?loop=1&muted=1",
+                            "https://streamable.com/e/apk2fp?loop=1&muted=1",
+                            "https://streamable.com/e/zn4m80?loop=1&muted=1",
+                            "https://streamable.com/e/piyseb?loop=1&muted=1",
+                            "https://streamable.com/e/tizd7j?loop=1&muted=1",
+                            "https://streamable.com/e/cbskv7?loop=1&muted=1",
+                            "https://streamable.com/e/28csiy?loop=1&muted=1",
+                            "https://streamable.com/e/jyfyk4?loop=1&muted=1",
+                            "https://streamable.com/e/lb7qsh?loop=1&muted=1",
+                            "https://streamable.com/e/eae2s6?loop=1&muted=1"
+                        ];
+                        // Select the container
+                        const container = document.querySelector('.babe-video-container-vertical');
+                        // Loop through all URLs and create video cards dynamically
+                        videos.forEach(url => {
+                            const videoCard = document.createElement('div');
+                            videoCard.classList.add('babe-video-card-vertical');
+
+                            const iframe = document.createElement('iframe');
+                            iframe.src = url;
+                            iframe.allow = "fullscreen";
+                            iframe.allowFullscreen = true;
+                            iframe.height = 1280;
+                            iframe.width = 720;
+                            iframe.style.border = "none";
+
+                            videoCard.appendChild(iframe);
+                            container.appendChild(videoCard);
+                        });
+                    </script>
                 </div>
             </div>
         </section>

@@ -8,18 +8,9 @@
     <link rel="stylesheet" href="../style.css">
     <link rel="stylesheet" href="../responsive.css">
     <script src="https://kit.fontawesome.com/17cb0df104.js" crossorigin="anonymous"></script>
-    <style>
-        body {
-            max-width: 100vw;
-            background: url('../pics/pink-babe-bg.jpg');
-            background-size: cover;
-            background-repeat: no-repeat;
-            background-position: top;
-        }
-    </style>
 </head>
 
-<body>
+<body class="body-bg-style">
     <div class="parallax-bg"></div>
     <header>
         <div class="header-items">
@@ -78,19 +69,76 @@
                         <img src="" alt="" />
                         <button class="next-btn"><i class="fa-solid fa-chevron-right"></i></button>
                     </div>
-                    <div class="babe-photo-card">
-                        <img src="" alt="">
+                    <div class="photo-cards-wrapper">
+                        <script>
+                            const photoCardsWrapper = document.querySelector('.photo-cards-wrapper');
+                            // List of photo paths
+                            const photos = [
+                                "onlyfans-pic/jessie/img/28.jpg",
+                                "onlyfans-pic/jessie/img/27.jpg",
+                                "onlyfans-pic/jessie/img/26.jpg",
+                                "onlyfans-pic/jessie/img/25.jpg",
+                                "onlyfans-pic/jessie/img/24.jpg",
+                                "onlyfans-pic/jessie/img/23.jpg",
+                                "onlyfans-pic/jessie/img/22.jpg",
+                                "onlyfans-pic/jessie/img/21.jpg",
+                                "onlyfans-pic/jessie/img/20.jpg",
+                                "onlyfans-pic/jessie/img/19.jpeg",
+                                "onlyfans-pic/jessie/img/18.jpeg",
+                                "onlyfans-pic/jessie/img/17.jpg",
+                                "onlyfans-pic/jessie/img/16.jpg",
+                                "onlyfans-pic/jessie/img/15.jpg",
+                                "onlyfans-pic/jessie/img/14.jpeg",
+                                "onlyfans-pic/jessie/img/13.jpg",
+                                "onlyfans-pic/jessie/img/12.jpg",
+                                "onlyfans-pic/jessie/img/11.jpg",
+                                "onlyfans-pic/jessie/img/10.jpg",
+                                "onlyfans-pic/jessie/img/9.jpg",
+                                "onlyfans-pic/jessie/img/8.jpg",
+                                "onlyfans-pic/jessie/img/7.jpg",
+                                "onlyfans-pic/jessie/img/6.jpg",
+                                "onlyfans-pic/jessie/img/5.jpg",
+                                "onlyfans-pic/jessie/img/4.jpg",
+                                "onlyfans-pic/jessie/img/3.jpg",
+                                "onlyfans-pic/jessie/img/2.jpg",
+                                "onlyfans-pic/jessie/img/1.jpg"
+                            ];
+                            // Generate photo cards
+                            photos.forEach(src => {
+                                const card = document.createElement('div');
+                                card.className = 'babe-photo-card';
+                                card.innerHTML = `<img src="${src}" alt="">`;
+                                photoCardsWrapper.appendChild(card);
+                            });
+                        </script>
                     </div>
                 </div>
                 <div class="babe-video-container-horizontal">
-                    <div class="babe-video-card-horizontal">
-                        <iframe width="600" height="480" src="https://d-s.io/e/zrcs1fd1fr5i" scrolling="no"
-                            frameborder="0" allowfullscreen="true"></iframe>
-                    </div>
-                    <div class="babe-video-card-horizontal">
-                        <iframe width="600" height="480" src="https://d-s.io/e/hu1shjtcsnfl" scrolling="no"
-                            frameborder="0" allowfullscreen="true"></iframe>
-                    </div>
+                    <script>
+                        // Array of all video URLs
+                        const videos = [
+                            "https://d-s.io/e/zrcs1fd1fr5i",
+                            "https://d-s.io/e/hu1shjtcsnfl"
+                        ];
+                        // Select the container
+                        const container = document.querySelector('.babe-video-container-horizontal');
+                        // Loop through all URLs and create video cards dynamically
+                        videos.forEach(url => {
+                            const videoCard = document.createElement('div');
+                            videoCard.classList.add('babe-video-card-horizontal');
+
+                            const iframe = document.createElement('iframe');
+                            iframe.src = url;
+                            iframe.allow = "fullscreen";
+                            iframe.allowFullscreen = true;
+                            iframe.height = 480;
+                            iframe.width = 600;
+                            iframe.style.border = "none";
+
+                            videoCard.appendChild(iframe);
+                            container.appendChild(videoCard);
+                        });
+                    </script>
                 </div>
             </div>
         </section>

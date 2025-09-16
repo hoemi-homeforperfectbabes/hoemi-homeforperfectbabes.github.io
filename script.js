@@ -109,7 +109,6 @@ closeBtn.addEventListener("click", () => {
 
 
 
-
 // BACK TO TOP
 const backToTopBtn = document.getElementById('backToTop');
 
@@ -134,4 +133,3 @@ window.addEventListener('scroll', () => {
 });
 
 
-//RESPONSIVE

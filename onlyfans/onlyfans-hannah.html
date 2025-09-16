@@ -8,18 +8,9 @@
     <link rel="stylesheet" href="../style.css">
     <link rel="stylesheet" href="../responsive.css">
     <script src="https://kit.fontawesome.com/17cb0df104.js" crossorigin="anonymous"></script>
-    <style>
-        body {
-            max-width: 100vw;
-            background: url('../pics/pink-babe-bg.jpg');
-            background-size: cover;
-            background-repeat: no-repeat;
-            background-position: top;
-        }
-    </style>
 </head>
 
-<body>
+<body class="body-bg-style">
     <div class="parallax-bg"></div>
     <header>
         <div class="header-items">
@@ -77,39 +68,113 @@
                         <img src="" alt="" />
                         <button class="next-btn"><i class="fa-solid fa-chevron-right"></i></button>
                     </div>
-                    <div class="babe-photo-card">
-                        <img src="" alt="">
+                    <div class="photo-cards-wrapper">
+                        <script>
+                            const photoCardsWrapper = document.querySelector('.photo-cards-wrapper');
+                            // List of photo paths
+                            const photos = [
+                                "onlyfans-pic/hannah/img/60.jpg",
+                                "onlyfans-pic/hannah/img/59.jpg",
+                                "onlyfans-pic/hannah/img/58.jpg",
+                                "onlyfans-pic/hannah/img/57.jpg",
+                                "onlyfans-pic/hannah/img/56.jpg",
+                                "onlyfans-pic/hannah/img/55.jpg",
+                                "onlyfans-pic/hannah/img/54.jpg",
+                                "onlyfans-pic/hannah/img/53.jpg",
+                                "onlyfans-pic/hannah/img/52.jpg",
+                                "onlyfans-pic/hannah/img/51.jpg",
+                                "onlyfans-pic/hannah/img/50.jpg",
+                                "onlyfans-pic/hannah/img/49.jpg",
+                                "onlyfans-pic/hannah/img/48.jpg",
+                                "onlyfans-pic/hannah/img/47.jpg",
+                                "onlyfans-pic/hannah/img/46.jpg",
+                                "onlyfans-pic/hannah/img/45.jpg",
+                                "onlyfans-pic/hannah/img/44.jpg",
+                                "onlyfans-pic/hannah/img/43.jpg",
+                                "onlyfans-pic/hannah/img/42.jpg",
+                                "onlyfans-pic/hannah/img/41.jpg",
+                                "onlyfans-pic/hannah/img/40.jpg",
+                                "onlyfans-pic/hannah/img/39.jpg",
+                                "onlyfans-pic/hannah/img/38.jpg",
+                                "onlyfans-pic/hannah/img/37.jpg",
+                                "onlyfans-pic/hannah/img/36.jpg",
+                                "onlyfans-pic/hannah/img/35.jpg",
+                                "onlyfans-pic/hannah/img/34.jpg",
+                                "onlyfans-pic/hannah/img/33.jpg",
+                                "onlyfans-pic/hannah/img/32.jpg",
+                                "onlyfans-pic/hannah/img/31.jpg",
+                                "onlyfans-pic/hannah/img/30.jpg",
+                                "onlyfans-pic/hannah/img/29.jpg",
+                                "onlyfans-pic/hannah/img/28.jpg",
+                                "onlyfans-pic/hannah/img/27.jpg",
+                                "onlyfans-pic/hannah/img/26.jpg",
+                                "onlyfans-pic/hannah/img/25.jpg",
+                                "onlyfans-pic/hannah/img/24.jpg",
+                                "onlyfans-pic/hannah/img/23.jpg",
+                                "onlyfans-pic/hannah/img/22.jpg",
+                                "onlyfans-pic/hannah/img/21.jpg",
+                                "onlyfans-pic/hannah/img/20.jpg",
+                                "onlyfans-pic/hannah/img/19.jpg",
+                                "onlyfans-pic/hannah/img/18.jpg",
+                                "onlyfans-pic/hannah/img/17.jpg",
+                                "onlyfans-pic/hannah/img/16.jpg",
+                                "onlyfans-pic/hannah/img/15.jpg",
+                                "onlyfans-pic/hannah/img/14.jpg",
+                                "onlyfans-pic/hannah/img/13.jpg",
+                                "onlyfans-pic/hannah/img/12.jpg",
+                                "onlyfans-pic/hannah/img/11.jpg",
+                                "onlyfans-pic/hannah/img/10.jpg",
+                                "onlyfans-pic/hannah/img/9.jpg",
+                                "onlyfans-pic/hannah/img/8.jpg",
+                                "onlyfans-pic/hannah/img/7.jpg",
+                                "onlyfans-pic/hannah/img/6.jpg",
+                                "onlyfans-pic/hannah/img/5.jpg",
+                                "onlyfans-pic/hannah/img/4.jpg",
+                                "onlyfans-pic/hannah/img/3.jpg",
+                                "onlyfans-pic/hannah/img/2.jpg",
+                                "onlyfans-pic/hannah/img/1.jpg"
+                            ];
+                            // Generate photo cards
+                            photos.forEach(src => {
+                                const card = document.createElement('div');
+                                card.className = 'babe-photo-card';
+                                card.innerHTML = `<img src="${src}" alt="">`;
+                                photoCardsWrapper.appendChild(card);
+                            });
+                        </script>
                     </div>
                 </div>
                 <div class="babe-video-container-horizontal">
-                    <div class="babe-video-card-horizontal">
-                        <iframe width="600" height="480" src="https://d-s.io/e/w96voof1lx9k" scrolling="no"
-                            frameborder="0" allowfullscreen="true"></iframe>
-                    </div>
-                    <div class="babe-video-card-horizontal">
-                        <iframe width="600" height="480" src="https://d-s.io/e/z46mxpihuw09" scrolling="no"
-                            frameborder="0" allowfullscreen="true"></iframe>
-                    </div>
-                    <div class="babe-video-card-horizontal">
-                        <iframe width="600" height="480" src="https://d-s.io/e/orxb77ccwvq3" scrolling="no"
-                            frameborder="0" allowfullscreen="true"></iframe>
-                    </div>
-                    <div class="babe-video-card-horizontal">
-                        <iframe width="600" height="480" src="https://d-s.io/e/tpphld09zlk4" scrolling="no"
-                            frameborder="0" allowfullscreen="true"></iframe>
-                    </div>
-                    <div class="babe-video-card-horizontal">
-                        <iframe width="600" height="480" src="https://d-s.io/e/a78j2henz71n" scrolling="no"
-                            frameborder="0" allowfullscreen="true"></iframe>
-                    </div>
-                    <div class="babe-video-card-horizontal">
-                        <iframe width="600" height="480" src="https://d-s.io/e/gnt8xki3v66g" scrolling="no"
-                            frameborder="0" allowfullscreen="true"></iframe>
-                    </div>
-                    <div class="babe-video-card-horizontal">
-                        <iframe width="600" height="480" src="https://d-s.io/e/cy4iftdqdjlc" scrolling="no"
-                            frameborder="0" allowfullscreen="true"></iframe>
-                    </div>
+                    <script>
+                        // Array of all video URLs
+                        const videos = [
+                            "https://d-s.io/e/cy4iftdqdjlc",
+                            "https://d-s.io/e/gnt8xki3v66g",
+                            "https://d-s.io/e/a78j2henz71n",
+                            "https://d-s.io/e/tpphld09zlk4",
+                            "https://d-s.io/e/orxb77ccwvq3",
+                            "https://d-s.io/e/z46mxpihuw09",
+                            "https://d-s.io/e/w96voof1lx9k"
+                        ];
+                        // Select the container
+                        const container = document.querySelector('.babe-video-container-horizontal');
+                        // Loop through all URLs and create video cards dynamically
+                        videos.forEach(url => {
+                            const videoCard = document.createElement('div');
+                            videoCard.classList.add('babe-video-card-horizontal');
+
+                            const iframe = document.createElement('iframe');
+                            iframe.src = url;
+                            iframe.allow = "fullscreen";
+                            iframe.allowFullscreen = true;
+                            iframe.height = 480;
+                            iframe.width = 600;
+                            iframe.style.border = "none";
+
+                            videoCard.appendChild(iframe);
+                            container.appendChild(videoCard);
+                        });
+                    </script>
                 </div>
             </div>
         </section>
