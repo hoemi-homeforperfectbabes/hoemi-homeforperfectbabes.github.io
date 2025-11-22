@@ -157,11 +157,13 @@
     }
 
     /* PHOTO POPUP  */
-    .popup-babe-photo .close-btn {
-        right: 20px;
+    .popup-babe-photo .close-btn,
+    .popup-babe-video .close-btn {
+        right: 0;
     }
 
-    .popup-babe-photo button {
+    .popup-babe-photo button,
+    .popup-babe-video button {
         padding: 60px 20px;
     }
 

@@ -46,7 +46,7 @@
                                 rel="noopener noreferrer"><i class="fa-brands fa-facebook fa-2xl"></i></a>
                             <a href="https://www.instagram.com/lunii_mhrzn/" target="_blank"
                                 rel="noopener noreferrer"><i class="fa-brands fa-instagram fa-2xl"></i></a>
-                            <a href="https://www.tiktok.com/@littldesire.777" target="_blank" rel="noopener noreferrer">
+                            <a href="https://www.tiktok.com/@luniva.777" target="_blank" rel="noopener noreferrer">
                                 <i class="fa-brands fa-tiktok fa-xl"></i></a>
                         </div>
                     </div>
@@ -58,17 +58,28 @@
                     <div class="babe-media-button" id="videoBtn">Video</div>
                 </div>
                 <div class="babe-photo-container active">
+                    <!-- Popup -->
                     <div class="popup-babe-photo">
-                        <span class="close-btn">&times;</span>
-                        <button class="prev-btn"><i class="fa-solid fa-chevron-left"></i></button>
+                        <button id="photoCloseButton" class="close-btn">
+                            <i class="fa-solid fa-xmark"></i>
+                        </button>
+                        <button id="photoPrevButton" class="prev-btn">
+                            <i class="fa-solid fa-chevron-left"></i>
+                        </button>
                         <img src="" alt="" />
-                        <button class="next-btn"><i class="fa-solid fa-chevron-right"></i></button>
+                        <button id="photoNextButton" class="next-btn">
+                            <i class="fa-solid fa-chevron-right"></i>
+                        </button>
                     </div>
                     <div class="photo-cards-wrapper">
                         <script>
                             const photoCardsWrapper = document.querySelector('.photo-cards-wrapper');
                             // List of photo paths
                             const photos = [
+                                "chicks-pic/luniva/img/13.jpeg",
+                                "chicks-pic/luniva/img/12.png",
+                                "chicks-pic/luniva/img/11.jpg",
+                                "chicks-pic/luniva/img/10.jpg",
                                 "chicks-pic/luniva/img/9.png",
                                 "chicks-pic/luniva/img/8.png",
                                 "chicks-pic/luniva/img/7.jpg",
@@ -83,72 +94,101 @@
                             photos.forEach(src => {
                                 const card = document.createElement('div');
                                 card.className = 'babe-photo-card';
-                                card.innerHTML = `<img src="${src}" alt="">`;
+                                card.innerHTML = `<img src="${src}" alt="" loading="lazy">`;
                                 photoCardsWrapper.appendChild(card);
                             });
                         </script>
                     </div>
                 </div>
                 <div class="babe-video-container-vertical">
+                    <!-- Popup -->
+                    <div class="popup-babe-video">
+                        <button class="close-btn" id="videoCloseButton">
+                            <i class="fa-solid fa-xmark"></i>
+                        </button>
+                        <button class="prev-btn" id="videoPrevButton">
+                            <i class="fa-solid fa-chevron-left"></i>
+                        </button>
+                        <iframe id="videoFrame" allowfullscreen></iframe>
+                        <button class="next-btn" id="videoNextButton">
+                            <i class="fa-solid fa-chevron-right"></i>
+                        </button>
+                    </div>
                     <script>
-                        // Array of all video URLs
-                        const videos = [
-                            "https://streamable.com/e/2phs1i?loop=1&muted=1",
-                            "https://streamable.com/e/iqsf4q?loop=1&muted=1",
-                            "https://streamable.com/e/e01odr?loop=1&muted=1",
-                            "https://streamable.com/e/izco4t?loop=1&muted=1",
-                            "https://streamable.com/e/bj8h9w?loop=1&muted=1",
-                            "https://streamable.com/e/mo72zk?loop=1&muted=1",
-                            "https://streamable.com/e/jp4wdh?loop=1&muted=1",
-                            "https://streamable.com/e/fbj84d?loop=1&muted=1",
-                            "https://streamable.com/e/z0337o?loop=1&muted=1",
-                            "https://streamable.com/e/5b0uhz?loop=1&muted=1",
-                            "https://streamable.com/e/xc3eoz?loop=1&muted=1",
-                            "https://streamable.com/e/5ckddy?loop=1&muted=1",
-                            "https://streamable.com/e/ldotug?loop=1&muted=1",
-                            "https://streamable.com/e/b7b0qq?loop=1&muted=1",
-                            "https://streamable.com/e/gy2v4g?loop=1&muted=1",
-                            "https://streamable.com/e/4xez3f?loop=1&muted=1",
-                            "https://streamable.com/e/g7mnuv?loop=1&muted=1",
-                            "https://streamable.com/e/p62baa?loop=1&muted=1",
-                            "https://streamable.com/e/kkxf6p?loop=1&muted=1",
-                            "https://streamable.com/e/stfrzu?loop=1&muted=1",
-                            "https://streamable.com/e/q6blcx?loop=1&muted=1",
-                            "https://streamable.com/e/y6s0xy?loop=1&muted=1",
-                            "https://streamable.com/e/lwna4h?loop=1&muted=1",
-                            "https://streamable.com/e/vygj13?loop=1&muted=1",
-                            "https://streamable.com/e/i7ya8j?loop=1&muted=1",
-                            "https://streamable.com/e/hbwqdv?loop=1&muted=1",
-                            "https://streamable.com/e/32cocm?loop=1&muted=1",
-                            "https://streamable.com/e/zc1dz2?loop=1&muted=1",
-                            "https://streamable.com/e/opipb6?loop=1&muted=1",
-                            "https://streamable.com/e/agb10v?loop=1&muted=1",
-                            "https://streamable.com/e/w6ijhw?loop=1&muted=1",
-                            "https://streamable.com/e/hzx0vm?loop=1&muted=1",
-                            "https://streamable.com/e/dyv78s?loop=1&muted=1",
-                            "https://streamable.com/e/91nm2s?loop=1&muted=1",
-                            "https://streamable.com/e/kw62vs?loop=1&muted=1",
-                            "https://streamable.com/e/wlpooi?loop=1&muted=1",
-                            "https://streamable.com/e/rmlfnt?loop=1&muted=1",
-                            "https://streamable.com/e/87l2yl?loop=1&muted=1"
+                        const thumbnails = [
+                            { thumb: "https://thumb.tapecontent.net/thumb/qMP9o9MLwGF1ZB/qWbRvrpg4pIa4M.jpg", video: "https://streamtape.com/e/qMP9o9MLwGF1ZB/056.mp4" },
+                            { thumb: "https://thumb.tapecontent.net/thumb/lwMkvY0WXJImgO/78yxzbLAZBhA9bz.jpg", video: "https://streamtape.com/e/lwMkvY0WXJImgO/055.mp4" },
+                            { thumb: "https://thumb.tapecontent.net/thumb/RXyjVJPVkYUd1JV/VmrKpOXALLTyZv.jpg", video: "https://streamtape.com/e/RXyjVJPVkYUd1JV/054.mp4" },
+                            { thumb: "https://thumb.tapecontent.net/thumb/wrk933qeyZSJkO4/06Q7B96domCbj71.jpg", video: "https://streamtape.com/e/wrk933qeyZSJkO4/053.mp4" },
+                            { thumb: "https://thumb.tapecontent.net/thumb/KL18bPzX2wC00A3/Jvr6Q641BZCoAr.jpg", video: "https://streamtape.com/e/KL18bPzX2wC00A3/052.mp4" },
+                            { thumb: "https://thumb.tapecontent.net/thumb/eKBQ4B7Q6OFjKg/XWDWRW2ygwSDOZ0.jpg", video: "https://streamtape.com/e/eKBQ4B7Q6OFjKg/051.mp4" },
+                            { thumb: "https://thumb.tapecontent.net/thumb/JvoZm8OYR7Cj3eX/r9l936O3z0teLV.jpg", video: "https://streamtape.com/e/JvoZm8OYR7Cj3eX/050.mp4" },
+                            { thumb: "https://thumb.tapecontent.net/thumb/JeOML38VdLFjB2W/k3DM6wWgrrfOMWA.jpg", video: "https://streamtape.com/e/JeOML38VdLFjB2W/049.mp4" },
+                            { thumb: "https://thumb.tapecontent.net/thumb/B7KB0zKMkAUyDJ8/wDlKAobv0xSPbK.jpg", video: "https://streamtape.com/e/B7KB0zKMkAUyDJ8/048.mp4" },
+                            { thumb: "https://thumb.tapecontent.net/thumb/jVmJ8o9jOPtzl3l/Qa4M9QyPVli06jK.jpg", video: "https://streamtape.com/e/jVmJ8o9jOPtzl3l/047.mp4" },
+                            { thumb: "https://thumb.tapecontent.net/thumb/k9rdVkpDxpIOGAe/02jx2j44yPSbyp1.jpg", video: "https://streamtape.com/e/k9rdVkpDxpIOGAe/046.mp4" },
+                            { thumb: "https://thumb.tapecontent.net/thumb/9pVKB0MyyzCDgY/dOWZaoeljWTkR7Q.jpg", video: "https://streamtape.com/e/9pVKB0MyyzCDgY/045.mp4" },
+                            { thumb: "https://thumb.tapecontent.net/thumb/DjKBGQvAeBhk062/k92Wjmw6ZmhOAGB.jpg", video: "https://streamtape.com/e/DjKBGQvAeBhk062/044.mp4" },
+                            { thumb: "https://thumb.tapecontent.net/thumb/oWYjab4bkAUv6b/v2oWXYbkdxF4G23.jpg", video: "https://streamtape.com/e/oWYjab4bkAUv6b/043.mp4" },
+                            { thumb: "https://thumb.tapecontent.net/thumb/4PGDyD2zgVsK0z8/p1BMxLqk3BFrd3r.jpg", video: "https://streamtape.com/e/4PGDyD2zgVsK0z8/042.mp4" },
+                            { thumb: "https://thumb.tapecontent.net/thumb/86LzGG27bgho7Bj/7jzxmyMYGjtA7ed.jpg", video: "https://streamtape.com/e/86LzGG27bgho7Bj/041.mp4" },
+                            { thumb: "https://thumb.tapecontent.net/thumb/wYr2kmPJB2tJMd2/9qwW2vbgVZfaM9M.jpg", video: "https://streamtape.com/e/wYr2kmPJB2tJMd2/040.mp4" },
+                            { thumb: "https://thumb.tapecontent.net/thumb/9PX8zedDAoU9Ak/PrgMp4qjb6c0JPL.jpg", video: "https://streamtape.com/e/9PX8zedDAoU9Ak/039.mp4" },
+                            { thumb: "https://thumb.tapecontent.net/thumb/YGMek3mMZJUB2R/klLkRxmzLohOk4J.jpg", video: "https://streamtape.com/e/YGMek3mMZJUB2R/038.mp4" },
+                            { thumb: "https://thumb.tapecontent.net/thumb/o1BAy3XLKbiJakm/41w7qzvB0Dc20x.jpg", video: "https://streamtape.com/e/o1BAy3XLKbiJakm/037.mp4" },
+                            { thumb: "https://thumb.tapecontent.net/thumb/Rk2kymLorltjMm/Ky8WxD96yxFJXw.jpg", video: "https://streamtape.com/e/Rk2kymLorltjMm/036.mp4" },
+                            { thumb: "https://thumb.tapecontent.net/thumb/b7RqaqkoO3tdrJ/m3Kxx4xzDQTbblY.jpg", video: "https://streamtape.com/e/b7RqaqkoO3tdrJ/035.mp4" },
+                            { thumb: "https://thumb.tapecontent.net/thumb/z6Wljo7w6kHQRR/GwpA8lGjqKfdXD.jpg", video: "https://streamtape.com/e/z6Wljo7w6kHQRR/034.mp4" },
+                            { thumb: "https://thumb.tapecontent.net/thumb/8D8A04vAqOioRZK/ZKA2z03egPTqQx6.jpg", video: "https://streamtape.com/e/8D8A04vAqOioRZK/033.mp4" },
+                            { thumb: "https://thumb.tapecontent.net/thumb/QkvQ2LwpymT06D7/vxVZ681302Sb1m.jpg", video: "https://streamtape.com/e/QkvQ2LwpymT06D7/032.mp4" },
+                            { thumb: "https://thumb.tapecontent.net/thumb/rlv1WveWAMt8ql/D0kWWeJqbPFkXDj.jpg", video: "https://streamtape.com/e/rlv1WveWAMt8ql/031.mp4" },
+                            { thumb: "https://thumb.tapecontent.net/thumb/PZYowxA4r3f0Vm1/vVzY9Z41b0TY7r.jpg", video: "https://streamtape.com/e/PZYowxA4r3f0Vm1/030.mp4" },
+                            { thumb: "https://thumb.tapecontent.net/thumb/DzYexrQ7z3i6MO/2rwyvjJlbotADW.jpg", video: "https://streamtape.com/e/DzYexrQ7z3i6MO/029.mp4" },
+                            { thumb: "https://thumb.tapecontent.net/thumb/paXkLxVw0RUrZMm/VO2e30bPMvFKLb6.jpg", video: "https://streamtape.com/e/paXkLxVw0RUrZMm/028.mp4" },
+                            { thumb: "https://thumb.tapecontent.net/thumb/yjljdGoa7jtmoz/KAgYrKKROJU0dGj.jpg", video: "https://streamtape.com/e/yjljdGoa7jtmoz/027.mp4" },
+                            { thumb: "https://thumb.tapecontent.net/thumb/Ok2923dv0qIZ2MD/rbZLBrlolAhbvOX.jpg", video: "https://streamtape.com/e/Ok2923dv0qIZ2MD/026.mp4" },
+                            { thumb: "https://thumb.tapecontent.net/thumb/Qg1Lj90dVjT0OLK/V8lB69volZCKRZX.jpg", video: "https://streamtape.com/e/Qg1Lj90dVjT0OLK/025.mp4" },
+                            { thumb: "https://thumb.tapecontent.net/thumb/AwDP2dp0r4c4P8/4zwVzZZRlYIKoRj.jpg", video: "https://streamtape.com/e/AwDP2dp0r4c4P8/024.mp4" },
+                            { thumb: "https://thumb.tapecontent.net/thumb/QJgAmjKmqxig8e/XWbGy7qjJgfDlAd.jpg", video: "https://streamtape.com/e/QJgAmjKmqxig8e/023.mp4" },
+                            { thumb: "https://thumb.tapecontent.net/thumb/dRYYW8M78wTko3Y/zLWK8dk38zcv8L.jpg", video: "https://streamtape.com/e/dRYYW8M78wTko3Y/022.mp4" },
+                            { thumb: "https://thumb.tapecontent.net/thumb/kZZg8xlrVYfOJbM/bql33OoqRzuPZ1X.jpg", video: "https://streamtape.com/e/kZZg8xlrVYfOJbM/021.mp4" },
+                            { thumb: "https://thumb.tapecontent.net/thumb/6w4O3JwOa9S92MW/j68p6wv9MgTzwVw.jpg", video: "https://streamtape.com/e/6w4O3JwOa9S92MW/020.mp4" },
+                            { thumb: "https://thumb.tapecontent.net/thumb/0z6wJb8oeXhALo/4oQZX4b1vmtZ14.jpg", video: "https://streamtape.com/e/0z6wJb8oeXhALo/019.mp4" },
+                            { thumb: "https://thumb.tapecontent.net/thumb/8dXgRXvPPksoQRr/zpZVvWDyl8cYRZO.jpg", video: "https://streamtape.com/e/8dXgRXvPPksoQRr/018.mp4" },
+                            { thumb: "https://thumb.tapecontent.net/thumb/7drvwdQkk9fADzJ/M9llA1xVwwCmj8L.jpg", video: "https://streamtape.com/e/7drvwdQkk9fADzJ/017.mp4" },
+                            { thumb: "https://thumb.tapecontent.net/thumb/0rQQMlQ2W2ibXMx/abjg20erXmUl26.jpg", video: "https://streamtape.com/e/0rQQMlQ2W2ibXMx/016.mp4" },
+                            { thumb: "https://thumb.tapecontent.net/thumb/vkBPVKxW32i4mGP/wVAjwlBWvYHJk6B.jpg", video: "https://streamtape.com/e/vkBPVKxW32i4mGP/015.mp4" },
+                            { thumb: "https://thumb.tapecontent.net/thumb/jp8711mz11tzPKA/2qKA2Rb4mptZOD0.jpg", video: "https://streamtape.com/e/jp8711mz11tzPKA/014.mp4" },
+                            { thumb: "https://thumb.tapecontent.net/thumb/G3pD6rBBV6i9wQ/Xw9ADOWRQqHD9LK.jpg", video: "https://streamtape.com/e/G3pD6rBBV6i9wQ/013.mp4" },
+                            { thumb: "https://thumb.tapecontent.net/thumb/MZol6zm4rjim4A4/oLr0v4Y846SJymg.jpg", video: "https://streamtape.com/e/MZol6zm4rjim4A4/012.mp4" },
+                            { thumb: "https://thumb.tapecontent.net/thumb/PbadGRBD0rIxy0/aqo1BpVA6Ksx8g9.jpg", video: "https://streamtape.com/e/PbadGRBD0rIxy0/011.mp4" },
+                            { thumb: "https://thumb.tapecontent.net/thumb/7PXV0Jooq9fYkK/RXxy0Z9Jo0TdA78.jpg", video: "https://streamtape.com/e/7PXV0Jooq9fYkK/010.mp4" },
+                            { thumb: "https://thumb.tapecontent.net/thumb/Xzb232g0jyIDemX/e4yGkoRO7ZiYW7o.jpg", video: "https://streamtape.com/e/Xzb232g0jyIDemX/009.mp4" },
+                            { thumb: "https://thumb.tapecontent.net/thumb/Jk2vbAwvRGtjxPG/vLyK9agKxQC40Ze.jpg", video: "https://streamtape.com/e/Jk2vbAwvRGtjxPG/008.mp4" },
+                            { thumb: "https://thumb.tapecontent.net/thumb/KQ8vvLgvPmh0dWo/XY4O3jw86rtAo6.jpg", video: "https://streamtape.com/e/KQ8vvLgvPmh0dWo/007.mp4" },
+                            { thumb: "https://thumb.tapecontent.net/thumb/b33jpDy3D3tPaw6/R9mg642XAJIjBl.jpg", video: "https://streamtape.com/e/b33jpDy3D3tPaw6/006.mp4" },
+                            { thumb: "https://thumb.tapecontent.net/thumb/ZrJ2wV0WdRsq86V/7b9dgVbyPwhAXbB.jpg", video: "https://streamtape.com/e/ZrJ2wV0WdRsq86V/005.mp4" },
+                            { thumb: "https://thumb.tapecontent.net/thumb/dvD7VwYw9VIkpe1/JkAMYbjekyIj0br.jpg", video: "https://streamtape.com/e/dvD7VwYw9VIkpe1/004.mp4" },
+                            { thumb: "https://thumb.tapecontent.net/thumb/dq0YLbprR9FkYGa/v2GMMvB7V0T4GgP.jpg", video: "https://streamtape.com/e/dq0YLbprR9FkYGa/003.mp4" },
+                            { thumb: "https://thumb.tapecontent.net/thumb/34OYL3Jok1Idwpk/G9Qj6WqO9Jc1zjj.jpg", video: "https://streamtape.com/e/34OYL3Jok1Idwpk/002.mp4" },
+                            { thumb: "https://thumb.tapecontent.net/thumb/dAeaYbBklwTkYeJ/7BYjV26relSVbW.jpg", video: "https://streamtape.com/e/dAeaYbBklwTkYeJ/001.mp4" }
                         ];
-                        // Select the container
-                        const container = document.querySelector('.babe-video-container-vertical');
-                        // Loop through all URLs and create video cards dynamically
-                        videos.forEach(url => {
-                            const videoCard = document.createElement('div');
-                            videoCard.classList.add('babe-video-card-vertical');
+                        const VIDEOcontainer = document.querySelector('.babe-video-container-vertical');
+                        // Create thumbnails dynamically
+                        thumbnails.forEach((item, index) => {
+                            const card = document.createElement('div');
+                            card.classList.add('babe-video-card-vertical');
+                            const img = document.createElement('img');
+                            img.src = item.thumb;
+                            img.alt = "thumbnail";
+                            img.loading = "lazy";
 
-                            const iframe = document.createElement('iframe');
-                            iframe.src = url;
-                            iframe.allow = "fullscreen";
-                            iframe.allowFullscreen = true;
-                            iframe.height = 1280;
-                            iframe.width = 720;
-                            iframe.style.border = "none";
+                            img.addEventListener('click', () => {
+                                openPopup(index);
+                            });
 
-                            videoCard.appendChild(iframe);
-                            container.appendChild(videoCard);
+                            card.appendChild(img);
+                            VIDEOcontainer.appendChild(card);
                         });
                     </script>
                 </div>

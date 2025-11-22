@@ -73,40 +73,85 @@ document.addEventListener('DOMContentLoaded', () => {
 
 // PHOTO POPUP
 const images = Array.from(document.querySelectorAll(".babe-photo-card img"));
-const popup = document.querySelector(".popup-babe-photo");
-const popupImg = popup.querySelector("img");
-const prevBtn = popup.querySelector(".prev-btn");
-const nextBtn = popup.querySelector(".next-btn");
-const closeBtn = popup.querySelector(".close-btn");
+const popupPhoto = document.querySelector(".popup-babe-photo");
+const popupImg = popupPhoto.querySelector("img");
 
-let currentIndex = 0;
+// Get elements by new IDs
+const photoPrevBtn = document.getElementById("photoPrevButton");
+const photoNextBtn = document.getElementById("photoNextButton");
+const photoCloseBtn = document.getElementById("photoCloseButton");
 
+let photoCurrentIndex = 0;
+
+// Open popup on image click
 images.forEach((img, index) => {
     img.addEventListener("click", () => {
-        currentIndex = index;
+        photoCurrentIndex = index;
         showImage();
-        popup.style.display = "block";
+        popupPhoto.style.display = "block";
+        // document.body.style.overflow = "hidden"; // optional: disable scroll
     });
 });
 
+// Function to update the popup image
 function showImage() {
-    popupImg.src = images[currentIndex].src;
+    popupImg.src = images[photoCurrentIndex].src;
 }
 
-prevBtn.addEventListener("click", () => {
-    currentIndex = (currentIndex - 1 + images.length) % images.length;
+// Prev button
+photoPrevBtn.addEventListener("click", () => {
+    photoCurrentIndex = (photoCurrentIndex - 1 + images.length) % images.length;
     showImage();
 });
 
-nextBtn.addEventListener("click", () => {
-    currentIndex = (currentIndex + 1) % images.length;
+// Next button
+photoNextBtn.addEventListener("click", () => {
+    photoCurrentIndex = (photoCurrentIndex + 1) % images.length;
     showImage();
 });
 
-closeBtn.addEventListener("click", () => {
-    popup.style.display = "none";
+// Close button
+photoCloseBtn.addEventListener("click", () => {
+    popupPhoto.style.display = "none";
+    document.body.style.overflow = "auto"; // re-enable scroll
 });
 
+
+//VIDEO POPUP
+const popup = document.querySelector('.popup-babe-video');
+const popupVideo = document.getElementById('videoFrame');
+const videoCloseBtn = document.getElementById('videoCloseButton');
+const videoPrevBtn = document.getElementById('videoPrevButton');
+const videoNextBtn = document.getElementById('videoNextButton');
+
+let videoCurrentIndex = 0;
+function openPopup(index) {
+    videoCurrentIndex = index;
+    popupVideo.src = thumbnails[index].video;
+    popup.style.display = 'flex';
+    document.body.style.overflow = 'hidden'; // disable scroll
+}
+
+function closePopup() {
+    popup.style.display = 'none';
+    popupVideo.src = ''; // stop video
+    document.body.style.overflow = 'auto';
+}
+
+function showNext() {
+    videoCurrentIndex = (videoCurrentIndex + 1) % thumbnails.length;
+    popupVideo.src = thumbnails[videoCurrentIndex].video;
+}
+
+function showPrev() {
+    videoCurrentIndex = (videoCurrentIndex - 1 + thumbnails.length) % thumbnails.length;
+    popupVideo.src = thumbnails[videoCurrentIndex].video;
+}
+
+// Event listeners
+videoCloseBtn.addEventListener('click', closePopup);
+videoNextBtn.addEventListener('click', showNext);
+videoPrevBtn.addEventListener('click', showPrev);
 
 
 // BACK TO TOP

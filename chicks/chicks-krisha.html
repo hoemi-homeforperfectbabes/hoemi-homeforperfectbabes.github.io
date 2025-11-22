@@ -58,11 +58,18 @@
                     <div class="babe-media-button" id="videoBtn">Video</div>
                 </div>
                 <div class="babe-photo-container active">
+                    <!-- Popup -->
                     <div class="popup-babe-photo">
-                        <span class="close-btn">&times;</span>
-                        <button class="prev-btn"><i class="fa-solid fa-chevron-left"></i></button>
+                        <button id="photoCloseButton" class="close-btn">
+                            <i class="fa-solid fa-xmark"></i>
+                        </button>
+                        <button id="photoPrevButton" class="prev-btn">
+                            <i class="fa-solid fa-chevron-left"></i>
+                        </button>
                         <img src="" alt="" />
-                        <button class="next-btn"><i class="fa-solid fa-chevron-right"></i></button>
+                        <button id="photoNextButton" class="next-btn">
+                            <i class="fa-solid fa-chevron-right"></i>
+                        </button>
                     </div>
                     <div class="photo-cards-wrapper">
                         <script>
@@ -107,53 +114,64 @@
                             photos.forEach(src => {
                                 const card = document.createElement('div');
                                 card.className = 'babe-photo-card';
-                                card.innerHTML = `<img src="${src}" alt="">`;
+                                card.innerHTML = `<img src="${src}" alt="" loading="lazy">`;
                                 photoCardsWrapper.appendChild(card);
                             });
                         </script>
                     </div>
                 </div>
                 <div class="babe-video-container-vertical">
+                    <!-- Popup -->
+                    <div class="popup-babe-video">
+                        <button class="close-btn" id="videoCloseButton">
+                            <i class="fa-solid fa-xmark"></i>
+                        </button>
+                        <button class="prev-btn" id="videoPrevButton">
+                            <i class="fa-solid fa-chevron-left"></i>
+                        </button>
+                        <iframe id="videoFrame" allowfullscreen></iframe>
+                        <button class="next-btn" id="videoNextButton">
+                            <i class="fa-solid fa-chevron-right"></i>
+                        </button>
+                    </div>
                     <script>
-                        // Array of all video URLs
-                        const videos = [
-                            "https://streamable.com/e/9m75fj?loop=1&muted=1",
-                            "https://streamable.com/e/t9g5vt?loop=1&muted=1",
-                            "https://streamable.com/e/vsegu5?loop=1&muted=1",
-                            "https://streamable.com/e/yulnxc?loop=1&muted=1",
-                            "https://streamable.com/e/5uicc7?loop=1&muted=1",
-                            "https://streamable.com/e/n6k37f?loop=1&muted=1",
-                            "https://streamable.com/e/1mv3xs?loop=1&muted=1",
-                            "https://streamable.com/e/mcteav?loop=1&muted=1",
-                            "https://streamable.com/e/a87rld?loop=1&muted=1",
-                            "https://streamable.com/e/tytad0?loop=1&muted=1",
-                            "https://streamable.com/e/zpak6m?loop=1&muted=1",
-                            "https://streamable.com/e/0n9b5k?loop=1&muted=1",
-                            "https://streamable.com/e/j6r2ql?loop=1&muted=1",
-                            "https://streamable.com/e/90rv6d?loop=1&muted=1",
-                            "https://streamable.com/e/ub7okj?loop=1&muted=1",
-                            "https://streamable.com/e/zsfjjc?loop=1&muted=1",
-                            "https://streamable.com/e/1v9jct?loop=1&muted=1",
-                            "https://streamable.com/e/rxnt69?loop=1&muted=1",
-                            "https://streamable.com/e/jfz5u0?loop=1&muted=1"
+                        const thumbnails = [
+                            { thumb: "https://thumb.tapecontent.net/thumb/apkJWmOpQgSOWq/QwOPjAkv4QCwPQ.jpg", video: "https://streamtape.com/e/apkJWmOpQgSOWq/019.mp4" },
+                            { thumb: "https://thumb.tapecontent.net/thumb/ALmoGrrVvLtXyoV/oL0oykQ7VyHJQJR.jpg", video: "https://streamtape.com/e/ALmoGrrVvLtXyoV/018.mp4" },
+                            { thumb: "https://thumb.tapecontent.net/thumb/4yA2OeAQxWSKRxx/ZzXAGW1ROrfR3V.jpg", video: "https://streamtape.com/e/4yA2OeAQxWSKRxx/017.mp4" },
+                            { thumb: "https://thumb.tapecontent.net/thumb/vr3VxD4dRQt4XBp/vlry3Q91RaH4OGk.jpg", video: "https://streamtape.com/e/vr3VxD4dRQt4XBp/016.mp4" },
+                            { thumb: "https://thumb.tapecontent.net/thumb/ZJOk2JVdDxFqVa4/dqyoYmlAqqiZyJ.jpg", video: "https://streamtape.com/e/ZJOk2JVdDxFqVa4/015.mp4" },
+                            { thumb: "https://thumb.tapecontent.net/thumb/K7d9Kvox3Yuak6/ydv4VR1VMdu1Ao1.jpg", video: "https://streamtape.com/e/K7d9Kvox3Yuak6/014.mp4" },
+                            { thumb: "https://thumb.tapecontent.net/thumb/Mqq41BJjYZCmkm4/rxlDW132RXUbDor.jpg", video: "https://streamtape.com/e/Mqq41BJjYZCmkm4/013.mp4" },
+                            { thumb: "https://thumb.tapecontent.net/thumb/LyJ1Vmeq0OsRw43/rdK6RyplALHbjeG.jpg", video: "https://streamtape.com/e/LyJ1Vmeq0OsRw43/012.mp4" },
+                            { thumb: "https://thumb.tapecontent.net/thumb/DP8m1L2VOpikzoG/lQ0JjZ7XkWi73Y2.jpg", video: "https://streamtape.com/e/DP8m1L2VOpikzoG/011.mp4" },
+                            { thumb: "https://thumb.tapecontent.net/thumb/VB8jm7qWLRiZae/eaoXm6kGOgsYMK8.jpg", video: "https://streamtape.com/e/VB8jm7qWLRiZae/010.mp4" },
+                            { thumb: "https://thumb.tapecontent.net/thumb/J3jD9p6zalFjXw8/jlOPPMRwwPHzy6B.jpg", video: "https://streamtape.com/e/J3jD9p6zalFjXw8/009.mp4" },
+                            { thumb: "https://thumb.tapecontent.net/thumb/Q1gmyvbMywHy30/LXKZVXoowmFWbD.jpg", video: "https://streamtape.com/e/Q1gmyvbMywHy30/008.mp4" },
+                            { thumb: "https://thumb.tapecontent.net/thumb/3W4k0yJdpRudqYq/m3DbL1xQyVFVjA.jpg", video: "https://streamtape.com/e/3W4k0yJdpRudqYq/007.mp4" },
+                            { thumb: "https://thumb.tapecontent.net/thumb/lGV7zdBXdOu77W0/O1lYLOW3M4UZqyp.jpg", video: "https://streamtape.com/e/lGV7zdBXdOu77W0/006.mp4" },
+                            { thumb: "https://thumb.tapecontent.net/thumb/1zqm7wyqYxsegXm/3W6VGdqX78id1dv.jpg", video: "https://streamtape.com/e/1zqm7wyqYxsegXm/005.mp4" },
+                            { thumb: "https://thumb.tapecontent.net/thumb/QbL38VM2M7FrGl/aqkgrplRxaubZY.jpg", video: "https://streamtape.com/e/QbL38VM2M7FrGl/004.mp4" },
+                            { thumb: "https://thumb.tapecontent.net/thumb/zMx8R8j7M3fYdJK/WGj6Jerb3vFbvR8.jpg", video: "https://streamtape.com/e/zMx8R8j7M3fYdJK/003.mp4" },
+                            { thumb: "https://thumb.tapecontent.net/thumb/AKRLepljryt4yy/XW4lgogKPvCD6bl.jpg", video: "https://streamtape.com/e/AKRLepljryt4yy/002.mp4" },
+                            { thumb: "https://thumb.tapecontent.net/thumb/rd098gJQA7CbVpe/6qYgry2dkos9Azk.jpg", video: "https://streamtape.com/e/rd098gJQA7CbVpe/001.mp4" }
                         ];
-                        // Select the container
-                        const container = document.querySelector('.babe-video-container-vertical');
-                        // Loop through all URLs and create video cards dynamically
-                        videos.forEach(url => {
-                            const videoCard = document.createElement('div');
-                            videoCard.classList.add('babe-video-card-vertical');
+                        const VIDEOcontainer = document.querySelector('.babe-video-container-vertical');
+                        // Create thumbnails dynamically
+                        thumbnails.forEach((item, index) => {
+                            const card = document.createElement('div');
+                            card.classList.add('babe-video-card-vertical');
+                            const img = document.createElement('img');
+                            img.src = item.thumb;
+                            img.alt = "thumbnail";
+                            img.loading = "lazy";
 
-                            const iframe = document.createElement('iframe');
-                            iframe.src = url;
-                            iframe.allow = "fullscreen";
-                            iframe.allowFullscreen = true;
-                            iframe.height = 1280;
-                            iframe.width = 720;
-                            iframe.style.border = "none";
+                            img.addEventListener('click', () => {
+                                openPopup(index);
+                            });
 
-                            videoCard.appendChild(iframe);
-                            container.appendChild(videoCard);
+                            card.appendChild(img);
+                            VIDEOcontainer.appendChild(card);
                         });
                     </script>
                 </div>

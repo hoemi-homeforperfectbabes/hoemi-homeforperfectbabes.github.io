@@ -65,11 +65,18 @@
                     <div class="babe-media-button" id="videoBtn">Video</div>
                 </div>
                 <div class="babe-photo-container active">
+                    <!-- Popup -->
                     <div class="popup-babe-photo">
-                        <span class="close-btn">&times;</span>
-                        <button class="prev-btn"><i class="fa-solid fa-chevron-left"></i></button>
+                        <button id="photoCloseButton" class="close-btn">
+                            <i class="fa-solid fa-xmark"></i>
+                        </button>
+                        <button id="photoPrevButton" class="prev-btn">
+                            <i class="fa-solid fa-chevron-left"></i>
+                        </button>
                         <img src="" alt="" />
-                        <button class="next-btn"><i class="fa-solid fa-chevron-right"></i></button>
+                        <button id="photoNextButton" class="next-btn">
+                            <i class="fa-solid fa-chevron-right"></i>
+                        </button>
                     </div>
                     <div class="photo-cards-wrapper">
                         <script>
@@ -106,15 +113,15 @@
                     <script>
                         // Array of all video URLs
                         const videos = [
-                            "https://d-s.io/e/et4h2wx7uwr5",
-                            "https://d-s.io/e/zfba7yal1su8",
-                            "https://d-s.io/e/8p590we31898",
-                            "https://d-s.io/e/qea9wiy7rxxm",
-                            "https://d-s.io/e/mpc6trd55ybf",
-                            "https://d-s.io/e/uqh5dud1jmji",
-                            "https://d-s.io/e/8qry11v9ngie",
-                            "https://d-s.io/e/4ysc6yc0g78j",
-                            "https://d-s.io/e/so0nuqrgbsag"
+                            "https://dsvplay.com/e/et4h2wx7uwr5",
+                            "https://dsvplay.com/e/zfba7yal1su8",
+                            "https://dsvplay.com/e/8p590we31898",
+                            "https://dsvplay.com/e/qea9wiy7rxxm",
+                            "https://dsvplay.com/e/mpc6trd55ybf",
+                            "https://dsvplay.com/e/uqh5dud1jmji",
+                            "https://dsvplay.com/e/8qry11v9ngie",
+                            "https://dsvplay.com/e/4ysc6yc0g78j",
+                            "https://dsvplay.com/e/so0nuqrgbsag"
                         ];
                         // Select the container
                         const container = document.querySelector('.babe-video-container-horizontal');

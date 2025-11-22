@@ -64,11 +64,18 @@
                     <div class="babe-media-button" id="videoBtn">Video</div>
                 </div>
                 <div class="babe-photo-container active">
+                    <!-- Popup -->
                     <div class="popup-babe-photo">
-                        <span class="close-btn">&times;</span>
-                        <button class="prev-btn"><i class="fa-solid fa-chevron-left"></i></button>
+                        <button id="photoCloseButton" class="close-btn">
+                            <i class="fa-solid fa-xmark"></i>
+                        </button>
+                        <button id="photoPrevButton" class="prev-btn">
+                            <i class="fa-solid fa-chevron-left"></i>
+                        </button>
                         <img src="" alt="" />
-                        <button class="next-btn"><i class="fa-solid fa-chevron-right"></i></button>
+                        <button id="photoNextButton" class="next-btn">
+                            <i class="fa-solid fa-chevron-right"></i>
+                        </button>
                     </div>
                     <div class="photo-cards-wrapper">
                         <script>
@@ -110,24 +117,24 @@
                     <script>
                         // Array of all video URLs
                         const videos = [
-                            "https://d-s.io/e/ihutmnewpvgn",
-                            "https://d-s.io/e/hdn4hlvmg668",
-                            "https://d-s.io/e/5tx7k7p4ca4q",
-                            "https://d-s.io/e/9f51ebqtpkvj",
-                            "https://d-s.io/e/46uxcidv3lt6",
-                            "https://d-s.io/e/qyrgaoqpshit",
-                            "https://d-s.io/e/cgue0v7rsdgb",
-                            "https://d-s.io/e/1cy4twgljwa4",
-                            "https://d-s.io/e/5mei7zrsw7fe",
-                            "https://d-s.io/e/o7pjjx3o3nfn",
-                            "https://d-s.io/e/w6f4w8gmddlc",
-                            "https://d-s.io/e/2ic6smxw50n2",
-                            "https://d-s.io/e/kk65814ll4mt",
-                            "https://d-s.io/e/ltpdg8k571gd",
-                            "https://d-s.io/e/08cjv06l16v0",
-                            "https://d-s.io/e/1jy3n1e0reui",
-                            "https://d-s.io/e/b53z449ikhac",
-                            "https://d-s.io/e/8z7p2dwaivfn"
+                            "https://dsvplay.com/e/ihutmnewpvgn",
+                            "https://dsvplay.com/e/hdn4hlvmg668",
+                            "https://dsvplay.com/e/5tx7k7p4ca4q",
+                            "https://dsvplay.com/e/9f51ebqtpkvj",
+                            "https://dsvplay.com/e/46uxcidv3lt6",
+                            "https://dsvplay.com/e/qyrgaoqpshit",
+                            "https://dsvplay.com/e/cgue0v7rsdgb",
+                            "https://dsvplay.com/e/1cy4twgljwa4",
+                            "https://dsvplay.com/e/5mei7zrsw7fe",
+                            "https://dsvplay.com/e/o7pjjx3o3nfn",
+                            "https://dsvplay.com/e/w6f4w8gmddlc",
+                            "https://dsvplay.com/e/2ic6smxw50n2",
+                            "https://dsvplay.com/e/kk65814ll4mt",
+                            "https://dsvplay.com/e/ltpdg8k571gd",
+                            "https://dsvplay.com/e/08cjv06l16v0",
+                            "https://dsvplay.com/e/1jy3n1e0reui",
+                            "https://dsvplay.com/e/b53z449ikhac",
+                            "https://dsvplay.com/e/8z7p2dwaivfn"
                         ];
 
                         // Select the container

@@ -29,6 +29,11 @@ body {
     overflow-x: hidden;
 }
 
+.no-scroll {
+    overflow: hidden;
+}
+
+
 .body-bg-style {
     max-width: 100vw;
     background: url('../pics/pink-babe-bg.jpg');
@@ -354,7 +359,6 @@ header {
 }
 
 /* PHOTO CONTAINER  */
-
 .babe-photo-container {
     width: 100%;
 }
@@ -370,7 +374,6 @@ header {
     width: 100%;
     border-radius: 10px;
     cursor: pointer;
-    /* padding-top: 56.25%; */
     overflow: hidden;
 }
 
@@ -378,6 +381,12 @@ header {
     width: 100%;
     height: 100%;
     object-fit: cover;
+    transition: 0.3s ease-in-out;
+}
+
+.babe-photo-card:hover.babe-photo-card img {
+    transform: scale(1.06);
+    transition: 0.3s ease-in-out;
 }
 
 /* VIDEO CONTAINER  */
@@ -404,25 +413,28 @@ header {
 }
 
 .babe-video-card-vertical {
-    aspect-ratio: 9 / 16;
+    aspect-ratio: 3/4;
     width: 100%;
     border-radius: 10px;
     cursor: pointer;
     overflow: hidden;
     background-color: var(--black);
-    /* fill behind video */
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
-/* .babe-video-card video, */
-.babe-video-card-horizontal iframe,
-.babe-video-card-vertical iframe {
+.babe-video-card-vertical img {
     width: 100%;
     height: 100%;
-    object-fit: contain;
-    border: none;
+    object-fit: cover;
+    transition: 0.3s ease-in-out;
+}
+
+.babe-video-card-horizontal:hover.babe-video-card-horizontal img,
+.babe-video-card-vertical:hover.babe-video-card-vertical img {
+    transform: scale(1.10);
+    transition: 0.3s ease-in-out;
 }
 
 /* TOGGLE PHOTO AND VIDEO  */
@@ -447,7 +459,7 @@ header {
 }
 
 
-/* PHOTO POPUP  */
+/* PHOTO AND VIDEO POPUP  */
 .popup-babe-photo {
     position: fixed;
     top: 0;
@@ -459,35 +471,34 @@ header {
     display: none;
 }
 
-.popup-babe-photo .close-btn {
+.popup-babe-video {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.9);
+    z-index: 100;
+    display: none;
+}
+
+.popup-babe-video.active {
+    display: block;
+}
+
+.popup-babe-photo .close-btn,
+.popup-babe-video .close-btn {
     position: absolute;
-    top: 20px;
-    right: 40px;
-    font-size: 60px;
-    font-weight: 300;
+    top: 40px;
+    right: 20px;
     color: var(--white);
     cursor: pointer;
     z-index: 100;
-    line-height: 30px;
     transition: 0.2s ease-in;
 }
 
-.popup-babe-photo .close-btn:hover {
-    color: var(--pink-shade2);
-    transition: 0.2s ease-in;
-}
-
-.popup-babe-photo img {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 100%;
-    height: 100%;
-    object-fit: contain;
-}
-
-.popup-babe-photo button {
+.popup-babe-photo button,
+.popup-babe-video button {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
@@ -500,13 +511,33 @@ header {
     transition: 0.2s ease-in;
 }
 
-.popup-babe-photo button:hover {
+.popup-babe-photo .close-btn:hover,
+.popup-babe-video .close-btn:hover,
+.popup-babe-photo button:hover,
+.popup-babe-video button:hover {
     color: var(--pink-shade2);
     transition: 0.2s ease-in;
 }
 
-.popup-babe-photo button i {
-    font-size: 30px;
+.popup-babe-photo button i,
+.popup-babe-video button i {
+    font-size: 36px;
+}
+
+.popup-babe-photo img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.popup-babe-video iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
 }
 
 .prev-btn {
