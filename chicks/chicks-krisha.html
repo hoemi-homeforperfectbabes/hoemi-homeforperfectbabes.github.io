@@ -34,7 +34,7 @@
         <section class="second-container">
             <div class="babe-data">
                 <div class="babe-pp">
-                    <img src="chicks-pic/krisha/img/krisha.jpeg" alt="">
+                    <img src="chicks-content/krisha/img/krisha.jpeg" alt="">
                 </div>
                 <div class="babe-info">
                     <div class="name">Krisha Shilpakar</div>
@@ -76,39 +76,46 @@
                             const photoCardsWrapper = document.querySelector('.photo-cards-wrapper');
                             // List of photo paths
                             const photos = [
-                                "chicks-pic/krisha/img/33.jpg",
-                                "chicks-pic/krisha/img/32.webp",
-                                "chicks-pic/krisha/img/31.webp",
-                                "chicks-pic/krisha/img/30.jpeg",
-                                "chicks-pic/krisha/img/29.jpeg",
-                                "chicks-pic/krisha/img/28.jpeg",
-                                "chicks-pic/krisha/img/27.jpeg",
-                                "chicks-pic/krisha/img/26.jpeg",
-                                "chicks-pic/krisha/img/25.jpeg",
-                                "chicks-pic/krisha/img/24.jpeg",
-                                "chicks-pic/krisha/img/23.jpeg",
-                                "chicks-pic/krisha/img/22.jpeg",
-                                "chicks-pic/krisha/img/21.jpeg",
-                                "chicks-pic/krisha/img/20.jpeg",
-                                "chicks-pic/krisha/img/19.jpeg",
-                                "chicks-pic/krisha/img/18.jpeg",
-                                "chicks-pic/krisha/img/17.jpeg",
-                                "chicks-pic/krisha/img/16.jpeg",
-                                "chicks-pic/krisha/img/15.jpeg",
-                                "chicks-pic/krisha/img/14.jpeg",
-                                "chicks-pic/krisha/img/13.jpeg",
-                                "chicks-pic/krisha/img/12.jpeg",
-                                "chicks-pic/krisha/img/11.jpeg",
-                                "chicks-pic/krisha/img/10.jpeg",
-                                "chicks-pic/krisha/img/9.jpeg",
-                                "chicks-pic/krisha/img/8.jpeg",
-                                "chicks-pic/krisha/img/7.jpeg",
-                                "chicks-pic/krisha/img/6.jpeg",
-                                "chicks-pic/krisha/img/5.jpeg",
-                                "chicks-pic/krisha/img/4.jpg",
-                                "chicks-pic/krisha/img/3.jpg",
-                                "chicks-pic/krisha/img/2.jpg",
-                                "chicks-pic/krisha/img/1.jpg"
+                                "chicks-content/krisha/img/40.png",
+                                "chicks-content/krisha/img/39.png",
+                                "chicks-content/krisha/img/38.png",
+                                "chicks-content/krisha/img/37.png",
+                                "chicks-content/krisha/img/36.png",
+                                "chicks-content/krisha/img/35.png",
+                                "chicks-content/krisha/img/34.png",
+                                "chicks-content/krisha/img/33.jpg",
+                                "chicks-content/krisha/img/32.webp",
+                                "chicks-content/krisha/img/31.webp",
+                                "chicks-content/krisha/img/30.jpeg",
+                                "chicks-content/krisha/img/29.jpeg",
+                                "chicks-content/krisha/img/28.jpeg",
+                                "chicks-content/krisha/img/27.jpeg",
+                                "chicks-content/krisha/img/26.jpeg",
+                                "chicks-content/krisha/img/25.jpeg",
+                                "chicks-content/krisha/img/24.jpeg",
+                                "chicks-content/krisha/img/23.jpeg",
+                                "chicks-content/krisha/img/22.jpeg",
+                                "chicks-content/krisha/img/21.jpeg",
+                                "chicks-content/krisha/img/20.jpeg",
+                                "chicks-content/krisha/img/19.jpeg",
+                                "chicks-content/krisha/img/18.jpeg",
+                                "chicks-content/krisha/img/17.jpeg",
+                                "chicks-content/krisha/img/16.jpeg",
+                                "chicks-content/krisha/img/15.jpeg",
+                                "chicks-content/krisha/img/14.jpeg",
+                                "chicks-content/krisha/img/13.jpeg",
+                                "chicks-content/krisha/img/12.jpeg",
+                                "chicks-content/krisha/img/11.jpeg",
+                                "chicks-content/krisha/img/10.jpeg",
+                                "chicks-content/krisha/img/9.jpeg",
+                                "chicks-content/krisha/img/8.jpeg",
+                                "chicks-content/krisha/img/7.jpeg",
+                                "chicks-content/krisha/img/6.jpeg",
+                                "chicks-content/krisha/img/5.jpeg",
+                                "chicks-content/krisha/img/4.jpg",
+                                "chicks-content/krisha/img/3.jpg",
+                                "chicks-content/krisha/img/2.jpg",
+                                "chicks-content/krisha/img/1.jpg"
                             ];
                             // Generate photo cards
                             photos.forEach(src => {
@@ -129,49 +136,55 @@
                         <button class="prev-btn" id="videoPrevButton">
                             <i class="fa-solid fa-chevron-left"></i>
                         </button>
-                        <iframe id="videoFrame" allowfullscreen></iframe>
+                        <video id="videoFrame" class="videoPlayer" controls autoplay></video>
                         <button class="next-btn" id="videoNextButton">
                             <i class="fa-solid fa-chevron-right"></i>
                         </button>
                     </div>
                     <script>
-                        const thumbnails = [
-                            { thumb: "https://thumb.tapecontent.net/thumb/apkJWmOpQgSOWq/QwOPjAkv4QCwPQ.jpg", video: "https://streamtape.com/e/apkJWmOpQgSOWq/019.mp4" },
-                            { thumb: "https://thumb.tapecontent.net/thumb/ALmoGrrVvLtXyoV/oL0oykQ7VyHJQJR.jpg", video: "https://streamtape.com/e/ALmoGrrVvLtXyoV/018.mp4" },
-                            { thumb: "https://thumb.tapecontent.net/thumb/4yA2OeAQxWSKRxx/ZzXAGW1ROrfR3V.jpg", video: "https://streamtape.com/e/4yA2OeAQxWSKRxx/017.mp4" },
-                            { thumb: "https://thumb.tapecontent.net/thumb/vr3VxD4dRQt4XBp/vlry3Q91RaH4OGk.jpg", video: "https://streamtape.com/e/vr3VxD4dRQt4XBp/016.mp4" },
-                            { thumb: "https://thumb.tapecontent.net/thumb/ZJOk2JVdDxFqVa4/dqyoYmlAqqiZyJ.jpg", video: "https://streamtape.com/e/ZJOk2JVdDxFqVa4/015.mp4" },
-                            { thumb: "https://thumb.tapecontent.net/thumb/K7d9Kvox3Yuak6/ydv4VR1VMdu1Ao1.jpg", video: "https://streamtape.com/e/K7d9Kvox3Yuak6/014.mp4" },
-                            { thumb: "https://thumb.tapecontent.net/thumb/Mqq41BJjYZCmkm4/rxlDW132RXUbDor.jpg", video: "https://streamtape.com/e/Mqq41BJjYZCmkm4/013.mp4" },
-                            { thumb: "https://thumb.tapecontent.net/thumb/LyJ1Vmeq0OsRw43/rdK6RyplALHbjeG.jpg", video: "https://streamtape.com/e/LyJ1Vmeq0OsRw43/012.mp4" },
-                            { thumb: "https://thumb.tapecontent.net/thumb/DP8m1L2VOpikzoG/lQ0JjZ7XkWi73Y2.jpg", video: "https://streamtape.com/e/DP8m1L2VOpikzoG/011.mp4" },
-                            { thumb: "https://thumb.tapecontent.net/thumb/VB8jm7qWLRiZae/eaoXm6kGOgsYMK8.jpg", video: "https://streamtape.com/e/VB8jm7qWLRiZae/010.mp4" },
-                            { thumb: "https://thumb.tapecontent.net/thumb/J3jD9p6zalFjXw8/jlOPPMRwwPHzy6B.jpg", video: "https://streamtape.com/e/J3jD9p6zalFjXw8/009.mp4" },
-                            { thumb: "https://thumb.tapecontent.net/thumb/Q1gmyvbMywHy30/LXKZVXoowmFWbD.jpg", video: "https://streamtape.com/e/Q1gmyvbMywHy30/008.mp4" },
-                            { thumb: "https://thumb.tapecontent.net/thumb/3W4k0yJdpRudqYq/m3DbL1xQyVFVjA.jpg", video: "https://streamtape.com/e/3W4k0yJdpRudqYq/007.mp4" },
-                            { thumb: "https://thumb.tapecontent.net/thumb/lGV7zdBXdOu77W0/O1lYLOW3M4UZqyp.jpg", video: "https://streamtape.com/e/lGV7zdBXdOu77W0/006.mp4" },
-                            { thumb: "https://thumb.tapecontent.net/thumb/1zqm7wyqYxsegXm/3W6VGdqX78id1dv.jpg", video: "https://streamtape.com/e/1zqm7wyqYxsegXm/005.mp4" },
-                            { thumb: "https://thumb.tapecontent.net/thumb/QbL38VM2M7FrGl/aqkgrplRxaubZY.jpg", video: "https://streamtape.com/e/QbL38VM2M7FrGl/004.mp4" },
-                            { thumb: "https://thumb.tapecontent.net/thumb/zMx8R8j7M3fYdJK/WGj6Jerb3vFbvR8.jpg", video: "https://streamtape.com/e/zMx8R8j7M3fYdJK/003.mp4" },
-                            { thumb: "https://thumb.tapecontent.net/thumb/AKRLepljryt4yy/XW4lgogKPvCD6bl.jpg", video: "https://streamtape.com/e/AKRLepljryt4yy/002.mp4" },
-                            { thumb: "https://thumb.tapecontent.net/thumb/rd098gJQA7CbVpe/6qYgry2dkos9Azk.jpg", video: "https://streamtape.com/e/rd098gJQA7CbVpe/001.mp4" }
+                        window.videos = [
+                            { file: "chicks-content/krisha/vid/020.mp4" },
+                            { file: "chicks-content/krisha/vid/019.mp4" },
+                            { file: "chicks-content/krisha/vid/018.mp4" },
+                            { file: "chicks-content/krisha/vid/017.mp4" },
+                            { file: "chicks-content/krisha/vid/016.mp4" },
+                            { file: "chicks-content/krisha/vid/015.mp4" },
+                            { file: "chicks-content/krisha/vid/014.mp4" },
+                            { file: "chicks-content/krisha/vid/013.mp4" },
+                            { file: "chicks-content/krisha/vid/012.mp4" },
+                            { file: "chicks-content/krisha/vid/011.mp4" },
+                            { file: "chicks-content/krisha/vid/010.mp4" },
+                            { file: "chicks-content/krisha/vid/009.mp4" },
+                            { file: "chicks-content/krisha/vid/008.mp4" },
+                            { file: "chicks-content/krisha/vid/007.mp4" },
+                            { file: "chicks-content/krisha/vid/006.mp4" },
+                            { file: "chicks-content/krisha/vid/005.mp4" },
+                            { file: "chicks-content/krisha/vid/004.mp4" },
+                            { file: "chicks-content/krisha/vid/003.mp4" },
+                            { file: "chicks-content/krisha/vid/002.mp4" },
+                            { file: "chicks-content/krisha/vid/001.mp4" }
                         ];
-                        const VIDEOcontainer = document.querySelector('.babe-video-container-vertical');
-                        // Create thumbnails dynamically
-                        thumbnails.forEach((item, index) => {
-                            const card = document.createElement('div');
-                            card.classList.add('babe-video-card-vertical');
-                            const img = document.createElement('img');
-                            img.src = item.thumb;
-                            img.alt = "thumbnail";
-                            img.loading = "lazy";
 
-                            img.addEventListener('click', () => {
+                        const container = document.querySelector(".babe-video-container-vertical");
+                        let currentIndex = 0;
+
+                        /* Create Video Thumbnails */
+                        videos.forEach((item, index) => {
+                            const card = document.createElement("div");
+                            card.classList.add("babe-video-card-vertical");
+
+                            const videoThumb = document.createElement("video");
+                            videoThumb.src = item.file;
+                            videoThumb.muted = true;
+                            videoThumb.preload = "metadata";
+                            videoThumb.classList.add("video-thumb");
+
+                            /* Click Opens Popup */
+                            card.addEventListener("click", () => {
                                 openPopup(index);
                             });
-
-                            card.appendChild(img);
-                            VIDEOcontainer.appendChild(card);
+                            card.appendChild(videoThumb);
+                            container.appendChild(card);
                         });
                     </script>
                 </div>

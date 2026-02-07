@@ -34,7 +34,7 @@
         <section class="second-container">
             <div class="babe-data">
                 <div class="babe-pp">
-                    <img src="chicks-pic/leena/img/leena.jpg" alt="">
+                    <img src="chicks-content/leena/img/leena.jpg" alt="">
                 </div>
                 <div class="babe-info">
                     <div class="name">Leena Awale</div>
@@ -76,17 +76,26 @@
                             const photoCardsWrapper = document.querySelector('.photo-cards-wrapper');
                             // List of photo paths
                             const photos = [
-                                "chicks-pic/leena/img/11.jpg",
-                                "chicks-pic/leena/img/10.jpg",
-                                "chicks-pic/leena/img/9.jpg",
-                                "chicks-pic/leena/img/8.jpg",
-                                "chicks-pic/leena/img/7.jpg",
-                                "chicks-pic/leena/img/6.jpg",
-                                "chicks-pic/leena/img/5.jpg",
-                                "chicks-pic/leena/img/4.jpg",
-                                "chicks-pic/leena/img/3.jpg",
-                                "chicks-pic/leena/img/2.jpg",
-                                "chicks-pic/leena/img/1.jpg"
+                                "chicks-content/leena/img/20.png",
+                                "chicks-content/leena/img/19.png",
+                                "chicks-content/leena/img/18.png",
+                                "chicks-content/leena/img/17.png",
+                                "chicks-content/leena/img/16.png",
+                                "chicks-content/leena/img/15.png",
+                                "chicks-content/leena/img/14.jpg",
+                                "chicks-content/leena/img/13.jpg",
+                                "chicks-content/leena/img/12.jpg",
+                                "chicks-content/leena/img/11.jpg",
+                                "chicks-content/leena/img/10.jpg",
+                                "chicks-content/leena/img/9.jpg",
+                                "chicks-content/leena/img/8.jpg",
+                                "chicks-content/leena/img/7.jpg",
+                                "chicks-content/leena/img/6.jpg",
+                                "chicks-content/leena/img/5.jpg",
+                                "chicks-content/leena/img/4.jpg",
+                                "chicks-content/leena/img/3.jpg",
+                                "chicks-content/leena/img/2.jpg",
+                                "chicks-content/leena/img/1.jpg"
                             ];
                             // Generate photo cards
                             photos.forEach(src => {
@@ -107,57 +116,71 @@
                         <button class="prev-btn" id="videoPrevButton">
                             <i class="fa-solid fa-chevron-left"></i>
                         </button>
-                        <iframe id="videoFrame" allowfullscreen></iframe>
+                        <video id="videoFrame" class="videoPlayer" controls autoplay></video>
                         <button class="next-btn" id="videoNextButton">
                             <i class="fa-solid fa-chevron-right"></i>
                         </button>
                     </div>
                     <script>
-                        const thumbnails = [
-                            { thumb: "https://thumb.tapecontent.net/thumb/4XXBgrkxAyhKY9z/1bPdA2ZvqVUe2XZ.jpg", video: "https://streamtape.com/e/4XXBgrkxAyhKY9z/027.mp4" },
-                            { thumb: "https://thumb.tapecontent.net/thumb/qyw9Wmgm43cz24Q/Yy2l6Jmae4TBj0.jpg", video: "https://streamtape.com/e/qyw9Wmgm43cz24Q/026.mp4" },
-                            { thumb: "https://thumb.tapecontent.net/thumb/vKv66kqwR7UjDR/Xr13mMrR4QH0Vd.jpg", video: "https://streamtape.com/e/vKv66kqwR7UjDR/025.mp4" },
-                            { thumb: "https://thumb.tapecontent.net/thumb/egpOrl0JMluOPg/M7K9l14ppLfmWgY.jpg", video: "https://streamtape.com/e/egpOrl0JMluOPg/024.mp4" },
-                            { thumb: "https://thumb.tapecontent.net/thumb/2BJMp284XKHAwR/JbK42w7xpLIoZj.jpg", video: "https://streamtape.com/e/2BJMp284XKHAwR/023.mp4" },
-                            { thumb: "https://thumb.tapecontent.net/thumb/1284jY9Wxluy0K/Zkeew07kZ2cqDVK.jpg", video: "https://streamtape.com/e/1284jY9Wxluy0K/022.mp4" },
-                            { thumb: "https://thumb.tapecontent.net/thumb/owKa2M2zpXtJrpK/MarB9KxB9GS6Ve.jpg", video: "https://streamtape.com/e/owKa2M2zpXtJrpK/021.mp4" },
-                            { thumb: "https://thumb.tapecontent.net/thumb/oDPlzGQoY4IJ6jX/m69gXoVq16Ub4Ke.jpg", video: "https://streamtape.com/e/oDPlzGQoY4IJ6jX/020.mp4" },
-                            { thumb: "https://thumb.tapecontent.net/thumb/dPMD481BwwckwdY/MjXJADQ4JyFDRa.jpg", video: "https://streamtape.com/e/dPMD481BwwckwdY/019.mp4" },
-                            { thumb: "https://thumb.tapecontent.net/thumb/MX2Z1YbogviYRA/2rdg4z2kKYFZ7VQ.jpg", video: "https://streamtape.com/e/MX2Z1YbogviYRA/018.mp4" },
-                            { thumb: "https://thumb.tapecontent.net/thumb/dOll8DowRwTko4Y/9k33AVPzy3saKpp.jpg", video: "https://streamtape.com/e/dOll8DowRwTko4Y/017.mp4" },
-                            { thumb: "https://thumb.tapecontent.net/thumb/yVpbyQAKYec19XG/RWL0Aoe8yrtd3l6.jpg", video: "https://streamtape.com/e/yVpbyQAKYec19XG/016.mp4" },
-                            { thumb: "https://thumb.tapecontent.net/thumb/4mOR96prGWSZmG/GM3bBpe4wmu1Kjb.jpg", video: "https://streamtape.com/e/4mOR96prGWSZmG/015.mp4" },
-                            { thumb: "https://thumb.tapecontent.net/thumb/aYlVRp4B30UzwJ/P9gWdOx7W6t0ap2.jpg", video: "https://streamtape.com/e/aYlVRp4B30UzwJ/014.mp4" },
-                            { thumb: "https://thumb.tapecontent.net/thumb/zb2o7XpPpWIYrMZ/dZoXrGlmJ3SZvW.jpg", video: "https://streamtape.com/e/zb2o7XpPpWIYrMZ/013.mp4" },
-                            { thumb: "https://thumb.tapecontent.net/thumb/AQwaZbqZWDSXyJD/AlB4XgrzAZuXOMR.jpg", video: "https://streamtape.com/e/AQwaZbqZWDSXyJD/012.mp4" },
-                            { thumb: "https://thumb.tapecontent.net/thumb/aP0yOxWeQXCxKrj/yDv3O6kkjPC18Bd.jpg", video: "https://streamtape.com/e/aP0yOxWeQXCxKrj/011.mp4" },
-                            { thumb: "https://thumb.tapecontent.net/thumb/3JdBaVgvqDTdd86/6ok81aL00Mc9DGx.jpg", video: "https://streamtape.com/e/3JdBaVgvqDTdd86/010.mp4" },
-                            { thumb: "https://thumb.tapecontent.net/thumb/Wp2GqLzKJGUbb2K/yPVlZmeqGjt11jA.jpg", video: "https://streamtape.com/e/Wp2GqLzKJGUbb2K/009.mp4" },
-                            { thumb: "https://thumb.tapecontent.net/thumb/adjjXK0AaVtx183/PWkM8aqLR3sbRX.jpg", video: "https://streamtape.com/e/adjjXK0AaVtx183/008.mp4" },
-                            { thumb: "https://thumb.tapecontent.net/thumb/Vx6gZDqyAaC9w2/7RL3Yd8m4lFA99B.jpg", video: "https://streamtape.com/e/Vx6gZDqyAaC9w2/007.mp4" },
-                            { thumb: "https://thumb.tapecontent.net/thumb/1jDmz0zWWdSp9o/Rp2AMbZDwZFJGw.jpg", video: "https://streamtape.com/e/1jDmz0zWWdSp9o/006.mp4" },
-                            { thumb: "https://thumb.tapecontent.net/thumb/8KMAYb620xC4v6/XdXLaDyz6eSDDOj.jpg", video: "https://streamtape.com/e/8KMAYb620xC4v6/005.mp4" },
-                            { thumb: "https://thumb.tapecontent.net/thumb/LOM4xXzeK6URjMA/KZQzk0gBkVI02zW.jpg", video: "https://streamtape.com/e/LOM4xXzeK6URjMA/004.mp4" },
-                            { thumb: "https://thumb.tapecontent.net/thumb/YBZm4WQXaDUOYe/BvDbm7oPZ3i2Rk.jpg", video: "https://streamtape.com/e/YBZm4WQXaDUOYe/003.mp4" },
-                            { thumb: "https://thumb.tapecontent.net/thumb/8RkxLRAkkZiXVv/17qMz40gbAuekzo.jpg", video: "https://streamtape.com/e/8RkxLRAkkZiXVv/002.mp4" },
-                            { thumb: "https://thumb.tapecontent.net/thumb/b2aJGvGgk4F262/j7PryvQaAzfzwBl.jpg", video: "https://streamtape.com/e/b2aJGvGgk4F262/001.mp4" }
+                        window.videos = [
+                            { file: "chicks-content/leena/vid/036.mp4" },
+                            { file: "chicks-content/leena/vid/035.mp4" },
+                            { file: "chicks-content/leena/vid/034.mp4" },
+                            { file: "chicks-content/leena/vid/033.mp4" },
+                            { file: "chicks-content/leena/vid/032.mp4" },
+                            { file: "chicks-content/leena/vid/031.mp4" },
+                            { file: "chicks-content/leena/vid/030.mp4" },
+                            { file: "chicks-content/leena/vid/029.mp4" },
+                            { file: "chicks-content/leena/vid/028.mp4" },
+                            { file: "chicks-content/leena/vid/027.mp4" },
+                            { file: "chicks-content/leena/vid/026.mp4" },
+                            { file: "chicks-content/leena/vid/025.mp4" },
+                            { file: "chicks-content/leena/vid/024.mp4" },
+                            { file: "chicks-content/leena/vid/023.mp4" },
+                            { file: "chicks-content/leena/vid/022.mp4" },
+                            { file: "chicks-content/leena/vid/021.mp4" },
+                            { file: "chicks-content/leena/vid/020.mp4" },
+                            { file: "chicks-content/leena/vid/019.mp4" },
+                            { file: "chicks-content/leena/vid/018.mp4" },
+                            { file: "chicks-content/leena/vid/017.mp4" },
+                            { file: "chicks-content/leena/vid/016.mp4" },
+                            { file: "chicks-content/leena/vid/015.mp4" },
+                            { file: "chicks-content/leena/vid/014.mp4" },
+                            { file: "chicks-content/leena/vid/013.mp4" },
+                            { file: "chicks-content/leena/vid/012.mp4" },
+                            { file: "chicks-content/leena/vid/011.mp4" },
+                            { file: "chicks-content/leena/vid/010.mp4" },
+                            { file: "chicks-content/leena/vid/009.mp4" },
+                            { file: "chicks-content/leena/vid/008.mp4" },
+                            { file: "chicks-content/leena/vid/007.mp4" },
+                            { file: "chicks-content/leena/vid/006.mp4" },
+                            { file: "chicks-content/leena/vid/005.mp4" },
+                            { file: "chicks-content/leena/vid/004.mp4" },
+                            { file: "chicks-content/leena/vid/003.mp4" },
+                            { file: "chicks-content/leena/vid/002.mp4" },
+                            { file: "chicks-content/leena/vid/001.mp4" }
                         ];
-                        const VIDEOcontainer = document.querySelector('.babe-video-container-vertical');
-                        // Create thumbnails dynamically
-                        thumbnails.forEach((item, index) => {
-                            const card = document.createElement('div');
-                            card.classList.add('babe-video-card-vertical');
-                            const img = document.createElement('img');
-                            img.src = item.thumb;
-                            img.alt = "thumbnail";
-                            img.loading = "lazy";
 
-                            img.addEventListener('click', () => {
+                        const container = document.querySelector(".babe-video-container-vertical");
+                        let currentIndex = 0;
+
+                        /* Create Video Thumbnails */
+                        videos.forEach((item, index) => {
+                            const card = document.createElement("div");
+                            card.classList.add("babe-video-card-vertical");
+
+                            const videoThumb = document.createElement("video");
+                            videoThumb.src = item.file;
+                            videoThumb.muted = true;
+                            videoThumb.preload = "metadata";
+                            videoThumb.classList.add("video-thumb");
+
+                            /* Click Opens Popup */
+                            card.addEventListener("click", () => {
                                 openPopup(index);
                             });
-
-                            card.appendChild(img);
-                            VIDEOcontainer.appendChild(card);
+                            card.appendChild(videoThumb);
+                            container.appendChild(card);
                         });
                     </script>
                 </div>

@@ -34,7 +34,7 @@
         <section class="second-container">
             <div class="babe-data">
                 <div class="babe-pp">
-                    <img src="chicks-pic/roisha/img/roisha.jpeg" alt="">
+                    <img src="chicks-content/roisha/img/roisha.jpeg" alt="">
                 </div>
                 <div class="babe-info">
                     <div class="name">Roisha Maharjan</div>
@@ -78,24 +78,25 @@
                             const photoCardsWrapper = document.querySelector('.photo-cards-wrapper');
                             // List of photo paths
                             const photos = [
-                                "chicks-pic/roisha/img/18.jpeg",
-                                "chicks-pic/roisha/img/17.jpeg",
-                                "chicks-pic/roisha/img/16.jpeg",
-                                "chicks-pic/roisha/img/15.jpg",
-                                "chicks-pic/roisha/img/14.jpg",
-                                "chicks-pic/roisha/img/13.jpg",
-                                "chicks-pic/roisha/img/12.jpeg",
-                                "chicks-pic/roisha/img/11.jpeg",
-                                "chicks-pic/roisha/img/10.jpeg",
-                                "chicks-pic/roisha/img/9.jpeg",
-                                "chicks-pic/roisha/img/8.jpeg",
-                                "chicks-pic/roisha/img/7.jpeg",
-                                "chicks-pic/roisha/img/6.jpeg",
-                                "chicks-pic/roisha/img/5.jpeg",
-                                "chicks-pic/roisha/img/4.jpeg",
-                                "chicks-pic/roisha/img/3.jpg",
-                                "chicks-pic/roisha/img/2.jpg",
-                                "chicks-pic/roisha/img/1.jpg"
+                                "chicks-content/roisha/img/19.jpg",
+                                "chicks-content/roisha/img/18.jpeg",
+                                "chicks-content/roisha/img/17.jpeg",
+                                "chicks-content/roisha/img/16.jpeg",
+                                "chicks-content/roisha/img/15.jpg",
+                                "chicks-content/roisha/img/14.jpg",
+                                "chicks-content/roisha/img/13.jpg",
+                                "chicks-content/roisha/img/12.jpeg",
+                                "chicks-content/roisha/img/11.jpeg",
+                                "chicks-content/roisha/img/10.jpeg",
+                                "chicks-content/roisha/img/9.jpeg",
+                                "chicks-content/roisha/img/8.jpeg",
+                                "chicks-content/roisha/img/7.jpeg",
+                                "chicks-content/roisha/img/6.jpeg",
+                                "chicks-content/roisha/img/5.jpeg",
+                                "chicks-content/roisha/img/4.jpeg",
+                                "chicks-content/roisha/img/3.jpg",
+                                "chicks-content/roisha/img/2.jpg",
+                                "chicks-content/roisha/img/1.jpg"
                             ];
                             // Generate photo cards
                             photos.forEach(src => {
@@ -116,43 +117,47 @@
                         <button class="prev-btn" id="videoPrevButton">
                             <i class="fa-solid fa-chevron-left"></i>
                         </button>
-                        <iframe id="videoFrame" allowfullscreen></iframe>
+                        <video id="videoFrame" class="videoPlayer" controls autoplay></video>
                         <button class="next-btn" id="videoNextButton">
                             <i class="fa-solid fa-chevron-right"></i>
                         </button>
                     </div>
                     <script>
-                        const thumbnails = [
-                            { thumb: "https://thumb.tapecontent.net/thumb/7KkXx28kw7HAZG8/94z2ZeJ42VuDj4.jpg", video: "https://streamtape.com/e/7KkXx28kw7HAZG8/012.mp4" },
-                            { thumb: "https://thumb.tapecontent.net/thumb/kkoRP0qR0ocOMzV/O244ZDqRKbcZdkQ.jpg", video: "https://streamtape.com/e/kkoRP0qR0ocOMzV/011.mp4" },
-                            { thumb: "https://thumb.tapecontent.net/thumb/jrkg13z2MoUmBR/wlG9gObymrFJrV9.jpg", video: "https://streamtape.com/e/jrkg13z2MoUmBR/010.mp4" },
-                            { thumb: "https://thumb.tapecontent.net/thumb/LkK8zBKpgwcRQKd/dqOx0kz97zIkVol.jpg", video: "https://streamtape.com/e/LkK8zBKpgwcRQKd/009.mp4" },
-                            { thumb: "https://thumb.tapecontent.net/thumb/qrGr09Zby4tRLr/wVqV4g0rowIJ98D.jpg", video: "https://streamtape.com/e/qrGr09Zby4tRLr/008.mp4" },
-                            { thumb: "https://thumb.tapecontent.net/thumb/q6g1VDldVVHzp1G/jA2qLyqmPJCgVG.jpg", video: "https://streamtape.com/e/q6g1VDldVVHzp1G/007.mp4" },
-                            { thumb: "https://thumb.tapecontent.net/thumb/bgwoBdRwwQtPXep/p4L2b64koJCrZy7.jpg", video: "https://streamtape.com/e/bgwoBdRwwQtPXep/006.mp4" },
-                            { thumb: "https://thumb.tapecontent.net/thumb/Xqmm4ereGYHZY1/o1BB3k1QwbfJrzD.jpg", video: "https://streamtape.com/e/Xqmm4ereGYHZY1/005.mp4" },
-                            { thumb: "https://thumb.tapecontent.net/thumb/9qdaBlQvg7sYWM/Jbx9rA4B02ijW4Y.jpg", video: "https://streamtape.com/e/9qdaBlQvg7sYWM/004.mp4" },
-                            { thumb: "https://thumb.tapecontent.net/thumb/ga3LmOMv49uqdX8/O2JA7GjmwLsZrob.jpg", video: "https://streamtape.com/e/ga3LmOMv49uqdX8/003.mp4" },
-                            { thumb: "https://thumb.tapecontent.net/thumb/zxmzbb7kxvhkj8/RLGq8OReyjUjDZ.jpg", video: "https://streamtape.com/e/zxmzbb7kxvhkj8/002.mp4" },
-                            { thumb: "https://thumb.tapecontent.net/thumb/aVb2jrWAaahxDpZ/mwawJ3WOgJFb9xR.jpg", video: "https://streamtape.com/e/aVb2jrWAaahxDpZ/001.mp4" }
+                        window.videos = [
+                            { file: "chicks-content/roisha/vid/012.mp4" },
+                            { file: "chicks-content/roisha/vid/011.mp4" },
+                            { file: "chicks-content/roisha/vid/010.mp4" },
+                            { file: "chicks-content/roisha/vid/009.mp4" },
+                            { file: "chicks-content/roisha/vid/008.mp4" },
+                            { file: "chicks-content/roisha/vid/007.mp4" },
+                            { file: "chicks-content/roisha/vid/006.mp4" },
+                            { file: "chicks-content/roisha/vid/005.mp4" },
+                            { file: "chicks-content/roisha/vid/004.mp4" },
+                            { file: "chicks-content/roisha/vid/003.mp4" },
+                            { file: "chicks-content/roisha/vid/002.mp4" },
+                            { file: "chicks-content/roisha/vid/001.mp4" }
                         ];
 
-                        const VIDEOcontainer = document.querySelector('.babe-video-container-vertical');
-                        // Create thumbnails dynamically
-                        thumbnails.forEach((item, index) => {
-                            const card = document.createElement('div');
-                            card.classList.add('babe-video-card-vertical');
-                            const img = document.createElement('img');
-                            img.src = item.thumb;
-                            img.alt = "thumbnail";
-                            img.loading = "lazy";
+                        const container = document.querySelector(".babe-video-container-vertical");
+                        let currentIndex = 0;
 
-                            img.addEventListener('click', () => {
+                        /* Create Video Thumbnails */
+                        videos.forEach((item, index) => {
+                            const card = document.createElement("div");
+                            card.classList.add("babe-video-card-vertical");
+
+                            const videoThumb = document.createElement("video");
+                            videoThumb.src = item.file;
+                            videoThumb.muted = true;
+                            videoThumb.preload = "metadata";
+                            videoThumb.classList.add("video-thumb");
+
+                            /* Click Opens Popup */
+                            card.addEventListener("click", () => {
                                 openPopup(index);
                             });
-
-                            card.appendChild(img);
-                            VIDEOcontainer.appendChild(card);
+                            card.appendChild(videoThumb);
+                            container.appendChild(card);
                         });
                     </script>
                 </div>

@@ -117,7 +117,43 @@ photoCloseBtn.addEventListener("click", () => {
 });
 
 
-//VIDEO POPUP
+// //VIDEO POPUP
+// const popup = document.querySelector('.popup-babe-video');
+// const popupVideo = document.getElementById('videoFrame');
+// const videoCloseBtn = document.getElementById('videoCloseButton');
+// const videoPrevBtn = document.getElementById('videoPrevButton');
+// const videoNextBtn = document.getElementById('videoNextButton');
+
+// let videoCurrentIndex = 0;
+// function openPopup(index) {
+//     videoCurrentIndex = index;
+//     popupVideo.src = thumbnails[index].video;
+//     popup.style.display = 'flex';
+//     document.body.style.overflow = 'hidden'; // disable scroll
+// }
+
+// function closePopup() {
+//     popup.style.display = 'none';
+//     popupVideo.src = ''; // stop video
+//     document.body.style.overflow = 'auto';
+// }
+
+// function showNext() {
+//     videoCurrentIndex = (videoCurrentIndex + 1) % thumbnails.length;
+//     popupVideo.src = thumbnails[videoCurrentIndex].video;
+// }
+
+// function showPrev() {
+//     videoCurrentIndex = (videoCurrentIndex - 1 + thumbnails.length) % thumbnails.length;
+//     popupVideo.src = thumbnails[videoCurrentIndex].video;
+// }
+
+// // Event listeners
+// videoCloseBtn.addEventListener('click', closePopup);
+// videoNextBtn.addEventListener('click', showNext);
+// videoPrevBtn.addEventListener('click', showPrev);
+
+// VIDEO POPUP
 const popup = document.querySelector('.popup-babe-video');
 const popupVideo = document.getElementById('videoFrame');
 const videoCloseBtn = document.getElementById('videoCloseButton');
@@ -125,33 +161,41 @@ const videoPrevBtn = document.getElementById('videoPrevButton');
 const videoNextBtn = document.getElementById('videoNextButton');
 
 let videoCurrentIndex = 0;
+
 function openPopup(index) {
     videoCurrentIndex = index;
-    popupVideo.src = thumbnails[index].video;
+
+    popupVideo.src = videos[index].file;
     popup.style.display = 'flex';
-    document.body.style.overflow = 'hidden'; // disable scroll
+    popupVideo.play();
+    popupVideo.muted = true;
+    document.body.style.overflow = 'hidden';
 }
 
 function closePopup() {
     popup.style.display = 'none';
-    popupVideo.src = ''; // stop video
+    popupVideo.pause();
+    popupVideo.src = '';
     document.body.style.overflow = 'auto';
 }
 
 function showNext() {
-    videoCurrentIndex = (videoCurrentIndex + 1) % thumbnails.length;
-    popupVideo.src = thumbnails[videoCurrentIndex].video;
+    videoCurrentIndex = (videoCurrentIndex + 1) % videos.length;
+    popupVideo.src = videos[videoCurrentIndex].file;
+    popupVideo.play();
 }
 
 function showPrev() {
-    videoCurrentIndex = (videoCurrentIndex - 1 + thumbnails.length) % thumbnails.length;
-    popupVideo.src = thumbnails[videoCurrentIndex].video;
+    videoCurrentIndex = (videoCurrentIndex - 1 + videos.length) % videos.length;
+    popupVideo.src = videos[videoCurrentIndex].file;
+    popupVideo.play();
 }
 
 // Event listeners
 videoCloseBtn.addEventListener('click', closePopup);
 videoNextBtn.addEventListener('click', showNext);
 videoPrevBtn.addEventListener('click', showPrev);
+
 
 
 // BACK TO TOP

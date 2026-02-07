@@ -34,7 +34,7 @@
         <section class="second-container">
             <div class="babe-data">
                 <div class="babe-pp">
-                    <img src="chicks-pic/yogini/img/yogini.png" alt="">
+                    <img src="chicks-content/yogini/img/yogini.png" alt="">
                 </div>
                 <div class="babe-info">
                     <div class="name">Yogini Thapa</div>
@@ -76,21 +76,21 @@
                             const photoCardsWrapper = document.querySelector('.photo-cards-wrapper');
                             // List of photo paths
                             const photos = [
-                                "chicks-pic/yogini/img/15.png",
-                                "chicks-pic/yogini/img/14.png",
-                                "chicks-pic/yogini/img/13.png",
-                                "chicks-pic/yogini/img/12.jpg",
-                                "chicks-pic/yogini/img/11.jpg",
-                                "chicks-pic/yogini/img/10.jpg",
-                                "chicks-pic/yogini/img/9.jpg",
-                                "chicks-pic/yogini/img/8.jpg",
-                                "chicks-pic/yogini/img/7.jpg",
-                                "chicks-pic/yogini/img/6.jpg",
-                                "chicks-pic/yogini/img/5.jpg",
-                                "chicks-pic/yogini/img/4.jpg",
-                                "chicks-pic/yogini/img/3.jpg",
-                                "chicks-pic/yogini/img/2.jpg",
-                                "chicks-pic/yogini/img/1.jpg"
+                                "chicks-content/yogini/img/15.png",
+                                "chicks-content/yogini/img/14.png",
+                                "chicks-content/yogini/img/13.png",
+                                "chicks-content/yogini/img/12.jpg",
+                                "chicks-content/yogini/img/11.jpg",
+                                "chicks-content/yogini/img/10.jpg",
+                                "chicks-content/yogini/img/9.jpg",
+                                "chicks-content/yogini/img/8.jpg",
+                                "chicks-content/yogini/img/7.jpg",
+                                "chicks-content/yogini/img/6.jpg",
+                                "chicks-content/yogini/img/5.jpg",
+                                "chicks-content/yogini/img/4.jpg",
+                                "chicks-content/yogini/img/3.jpg",
+                                "chicks-content/yogini/img/2.jpg",
+                                "chicks-content/yogini/img/1.jpg"
                             ];
                             // Generate photo cards
                             photos.forEach(src => {
@@ -111,57 +111,63 @@
                         <button class="prev-btn" id="videoPrevButton">
                             <i class="fa-solid fa-chevron-left"></i>
                         </button>
-                        <iframe id="videoFrame" allowfullscreen></iframe>
+                        <video id="videoFrame" class="videoPlayer" controls autoplay></video>
                         <button class="next-btn" id="videoNextButton">
                             <i class="fa-solid fa-chevron-right"></i>
                         </button>
                     </div>
                     <script>
-                        const thumbnails = [
-                            { thumb: "https://thumb.tapecontent.net/thumb/8JJovb1aMzUoAvg/DqP6MV1ybRsLGq.jpg", video: "https://streamtape.com/e/8JJovb1aMzUoAvg/027.mp4" },
-                            { thumb: "https://thumb.tapecontent.net/thumb/DjQMjW8wM0SkoBD/mYY0PMLXzrtbg3X.jpg", video: "https://streamtape.com/e/DjQMjW8wM0SkoBD/026.mp4" },
-                            { thumb: "https://thumb.tapecontent.net/thumb/BjeJZ0aLkBfyaM3/dk1GjY1zMpIkVZe.jpg", video: "https://streamtape.com/e/BjeJZ0aLkBfyaM3/025.mp4" },
-                            { thumb: "https://thumb.tapecontent.net/thumb/qJq4J16DbqfYOP/W98Pw1j741IbjeQ.jpg", video: "https://streamtape.com/e/qJq4J16DbqfYOP/024.mp4" },
-                            { thumb: "https://thumb.tapecontent.net/thumb/7wxgw4b277uAe2J/r9DZX7qM3QIbZ8Q.jpg", video: "https://streamtape.com/e/7wxgw4b277uAe2J/023.mp4" },
-                            { thumb: "https://thumb.tapecontent.net/thumb/GMA4Ko4YpQh11l6/AXOQZxoMKoTWG3.jpg", video: "https://streamtape.com/e/GMA4Ko4YpQh11l6/022.mp4" },
-                            { thumb: "https://thumb.tapecontent.net/thumb/ga4Ywwzp44hqbjl/DXL8LLzAxqHka9x.jpg", video: "https://streamtape.com/e/ga4Ywwzp44hqbjl/021.mp4" },
-                            { thumb: "https://thumb.tapecontent.net/thumb/3VMbG7KqboUdWvB/zPA1gAzLGyCyq4.jpg", video: "https://streamtape.com/e/3VMbG7KqboUdWvB/020.mp4" },
-                            { thumb: "https://thumb.tapecontent.net/thumb/gVkgVZBP7vtqrqr/YeM6pXLJYQhvbm3.jpg", video: "https://streamtape.com/e/gVkgVZBP7vtqrqr/019.mp4" },
-                            { thumb: "https://thumb.tapecontent.net/thumb/mQ7lg19deXubZOM/6mPqleKAmmSxwb.jpg", video: "https://streamtape.com/e/mQ7lg19deXubZOM/018.mp4" },
-                            { thumb: "https://thumb.tapecontent.net/thumb/RDB0KBZGBQuddkD/D0pdrJVqWGCkoMl.jpg", video: "https://streamtape.com/e/RDB0KBZGBQuddkD/017.mp4" },
-                            { thumb: "https://thumb.tapecontent.net/thumb/WQJr4GykQwfqv1/wzoy3APXrBfJ00y.jpg", video: "https://streamtape.com/e/WQJr4GykQwfqv1/016.mp4" },
-                            { thumb: "https://thumb.tapecontent.net/thumb/L1vKdYWxk7uekJ/AJwQr2VyR2hBre.jpg", video: "https://streamtape.com/e/L1vKdYWxk7uekJ/015.mp4" },
-                            { thumb: "https://thumb.tapecontent.net/thumb/QwYpBawXBws0jBv/k9Xr3rMM9qirlV.jpg", video: "https://streamtape.com/e/QwYpBawXBws0jBv/014.mp4" },
-                            { thumb: "https://thumb.tapecontent.net/thumb/4yqjVGwkOqtKX2e/g1W6zryP6xCqbg8.jpg", video: "https://streamtape.com/e/4yqjVGwkOqtKX2e/013.mp4" },
-                            { thumb: "https://thumb.tapecontent.net/thumb/XwRz4JoWojsDRBM/xmy3O27gDqfkevP.jpg", video: "https://streamtape.com/e/XwRz4JoWojsDRBM/012.mp4" },
-                            { thumb: "https://thumb.tapecontent.net/thumb/oLLbdXGD99iJayR/MYgReO3rgxFm7w1.jpg", video: "https://streamtape.com/e/oLLbdXGD99iJayR/011.mp4" },
-                            { thumb: "https://thumb.tapecontent.net/thumb/a0LyLVY22ACx8y8/wP8B6vAV64uJvM0.jpg", video: "https://streamtape.com/e/a0LyLVY22ACx8y8/010.mp4" },
-                            { thumb: "https://thumb.tapecontent.net/thumb/QJYVBkOXaaS01jX/VGjv681k06IzMK.jpg", video: "https://streamtape.com/e/QJYVBkOXaaS01jX/009.mp4" },
-                            { thumb: "https://thumb.tapecontent.net/thumb/owQYGv8pa1iJowr/AQ73obMqkZIX6VQ.jpg", video: "https://streamtape.com/e/owQYGv8pa1iJowr/008.mp4" },
-                            { thumb: "https://thumb.tapecontent.net/thumb/RQkoOBgj21Fdrj1/6xRZVYDwGVcL0W.jpg", video: "https://streamtape.com/e/RQkoOBgj21Fdrj1/007.mp4" },
-                            { thumb: "https://thumb.tapecontent.net/thumb/gPjjebMA8xhq8dl/AKwRXMwJd9IG06.jpg", video: "https://streamtape.com/e/gPjjebMA8xhq8dl/006.mp4" },
-                            { thumb: "https://thumb.tapecontent.net/thumb/3q9GZ6ZqaGHd7Zg/GkqAdB31leSaG3.jpg", video: "https://streamtape.com/e/3q9GZ6ZqaGHd7Zg/005.mp4" },
-                            { thumb: "https://thumb.tapecontent.net/thumb/7R6x13Je3Ps4lj/x18qW0yVRvTkJVe.jpg", video: "https://streamtape.com/e/7R6x13Je3Ps4lj/004.mp4" },
-                            { thumb: "https://thumb.tapecontent.net/thumb/z71V1XjOxqsY11g/pY9WVO33eQUr4P8.jpg", video: "https://streamtape.com/e/z71V1XjOxqsY11g/003.mp4" },
-                            { thumb: "https://thumb.tapecontent.net/thumb/roqAd4Ywr4sbBkd/Yq8v4yRQKeuBkw.jpg", video: "https://streamtape.com/e/roqAd4Ywr4sbBkd/002.mp4" },
-                            { thumb: "https://thumb.tapecontent.net/thumb/wl6ayQOB7LsJJqq/pd04o9gDp8HraL9.jpg", video: "https://streamtape.com/e/wl6ayQOB7LsJJqq/001.mp4" }
+                        window.videos = [
+                            { file: "chicks-content/yogini/vid/028.mp4" },
+                            { file: "chicks-content/yogini/vid/027.mp4" },
+                            { file: "chicks-content/yogini/vid/026.mp4" },
+                            { file: "chicks-content/yogini/vid/025.mp4" },
+                            { file: "chicks-content/yogini/vid/024.mp4" },
+                            { file: "chicks-content/yogini/vid/023.mp4" },
+                            { file: "chicks-content/yogini/vid/022.mp4" },
+                            { file: "chicks-content/yogini/vid/021.mp4" },
+                            { file: "chicks-content/yogini/vid/020.mp4" },
+                            { file: "chicks-content/yogini/vid/019.mp4" },
+                            { file: "chicks-content/yogini/vid/018.mp4" },
+                            { file: "chicks-content/yogini/vid/017.mp4" },
+                            { file: "chicks-content/yogini/vid/016.mp4" },
+                            { file: "chicks-content/yogini/vid/015.mp4" },
+                            { file: "chicks-content/yogini/vid/014.mp4" },
+                            { file: "chicks-content/yogini/vid/013.mp4" },
+                            { file: "chicks-content/yogini/vid/012.mp4" },
+                            { file: "chicks-content/yogini/vid/011.mp4" },
+                            { file: "chicks-content/yogini/vid/010.mp4" },
+                            { file: "chicks-content/yogini/vid/009.mp4" },
+                            { file: "chicks-content/yogini/vid/008.mp4" },
+                            { file: "chicks-content/yogini/vid/007.mp4" },
+                            { file: "chicks-content/yogini/vid/006.mp4" },
+                            { file: "chicks-content/yogini/vid/005.mp4" },
+                            { file: "chicks-content/yogini/vid/004.mp4" },
+                            { file: "chicks-content/yogini/vid/003.mp4" },
+                            { file: "chicks-content/yogini/vid/002.mp4" },
+                            { file: "chicks-content/yogini/vid/001.mp4" }
                         ];
-                        const VIDEOcontainer = document.querySelector('.babe-video-container-vertical');
-                        // Create thumbnails dynamically
-                        thumbnails.forEach((item, index) => {
-                            const card = document.createElement('div');
-                            card.classList.add('babe-video-card-vertical');
-                            const img = document.createElement('img');
-                            img.src = item.thumb;
-                            img.alt = "thumbnail";
-                            img.loading = "lazy";
 
-                            img.addEventListener('click', () => {
+                        const container = document.querySelector(".babe-video-container-vertical");
+                        let currentIndex = 0;
+
+                        /* Create Video Thumbnails */
+                        videos.forEach((item, index) => {
+                            const card = document.createElement("div");
+                            card.classList.add("babe-video-card-vertical");
+
+                            const videoThumb = document.createElement("video");
+                            videoThumb.src = item.file;
+                            videoThumb.muted = true;
+                            videoThumb.preload = "metadata";
+                            videoThumb.classList.add("video-thumb");
+
+                            /* Click Opens Popup */
+                            card.addEventListener("click", () => {
                                 openPopup(index);
                             });
-
-                            card.appendChild(img);
-                            VIDEOcontainer.appendChild(card);
+                            card.appendChild(videoThumb);
+                            container.appendChild(card);
                         });
                     </script>
                 </div>
