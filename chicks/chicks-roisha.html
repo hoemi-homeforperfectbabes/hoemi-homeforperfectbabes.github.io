@@ -78,6 +78,7 @@
                             const photoCardsWrapper = document.querySelector('.photo-cards-wrapper');
                             // List of photo paths
                             const photos = [
+                                "chicks-content/roisha/img/20.jpg",
                                 "chicks-content/roisha/img/19.jpg",
                                 "chicks-content/roisha/img/18.jpeg",
                                 "chicks-content/roisha/img/17.jpeg",
@@ -145,18 +146,20 @@
                         videos.forEach((item, index) => {
                             const card = document.createElement("div");
                             card.classList.add("babe-video-card-vertical");
-
-                            const videoThumb = document.createElement("video");
-                            videoThumb.src = item.file;
-                            videoThumb.muted = true;
-                            videoThumb.preload = "metadata";
-                            videoThumb.classList.add("video-thumb");
+                            const imgThumb = document.createElement("img");
+                            // convert video path → thumbnail path
+                            imgThumb.src = item.file
+                                .replace("/vid/", "/thumb/")
+                                .replace(".mp4", ".jpg");
+                            imgThumb.alt = "video thumbnail";
+                            imgThumb.loading = "lazy";
+                            imgThumb.classList.add("video-thumb");
 
                             /* Click Opens Popup */
                             card.addEventListener("click", () => {
                                 openPopup(index);
                             });
-                            card.appendChild(videoThumb);
+                            card.appendChild(imgThumb);
                             container.appendChild(card);
                         });
                     </script>

@@ -431,8 +431,8 @@ header {
     transition: 0.3s ease-in;
 }
 
-.babe-video-card-horizontal:hover.babe-video-card-horizontal video,
-.babe-video-card-vertical:hover.babe-video-card-vertical video {
+.babe-video-card-horizontal:hover.babe-video-card-horizontal img,
+.babe-video-card-vertical:hover.babe-video-card-vertical img {
     transform: scale(1.05);
     transition: 0.3s ease-in;
 }
